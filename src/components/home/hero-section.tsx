@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function HeroSection() {
   return (
-    <section className="relative h-screen min-h-[600px] w-full flex items-center justify-center md:min-h-[700px]">
+    <section className="relative h-screen min-h-[600px] w-full flex items-center justify-center text-center md:min-h-[700px]">
       <div className="absolute inset-0">
         <Image
           src="/images/hero-background.webp"
