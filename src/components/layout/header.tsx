@@ -1,0 +1,94 @@
+'use client';
+
+import Link from 'next/link';
+import { Menu } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { useState, useEffect } from 'react';
+import { cn } from '@/lib/utils';
+import { LionLogo } from '../icons/lion-logo';
+
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/services', label: 'Services' },
+  { href: '/case-studies', label: 'Case Studies' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/team', label: 'Team' },
+  { href: '/contact', label: 'Contact' },
+];
+
+export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <header
+      className={cn(
+        'sticky top-0 z-50 w-full transition-all duration-300',
+        isScrolled ? 'bg-background/80 shadow-md backdrop-blur-sm' : 'bg-transparent'
+      )}
+    >
+      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
+        <Link href="/" className="flex items-center gap-2" prefetch={false}>
+          <LionLogo />
+          <span className="font-headline text-lg font-bold text-primary">Lion Code</span>
+        </Link>
+        <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="font-headline text-foreground/80 transition-colors hover:text-primary"
+              prefetch={false}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+        <div className="flex items-center gap-4">
+           <Button asChild className="hidden md:flex">
+              <Link href="/contact">Get a Quote</Link>
+            </Button>
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="outline" size="icon" className="md:hidden">
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Toggle navigation menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right">
+              <div className="grid gap-4 p-4">
+                <Link href="/" className="flex items-center gap-2" prefetch={false}>
+                  <LionLogo />
+                  <span className="font-headline text-lg font-bold text-primary">Lion Code</span>
+                </Link>
+                <nav className="grid gap-2 text-base font-medium">
+                  {navLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="block rounded-lg px-3 py-2 text-foreground/80 transition-colors hover:bg-accent hover:text-accent-foreground"
+                      prefetch={false}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </nav>
+                <Button asChild>
+                  <Link href="/contact">Get a Quote</Link>
+                </Button>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
+      </div>
+    </header>
+  );
+}
