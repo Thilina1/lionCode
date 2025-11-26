@@ -6,12 +6,14 @@ import TeamSection from '@/components/home/team-section';
 import BlogSection from '@/components/home/blog-section';
 import { Separator } from '@/components/ui/separator';
 import ProductCollection from '@/components/home/product-collection';
+import InnovationsSection from '@/components/home/innovations-section';
 
 export default function Home() {
   return (
     <>
       <HeroSection />
       <ProductCollection />
+      <InnovationsSection />
       <ServicesOverview />
       <CtaSection />
       <CaseStudiesSection />

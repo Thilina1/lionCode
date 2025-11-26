@@ -83,6 +83,42 @@
       "description": "Shelf Track logo",
       "imageUrl": "https://images.unsplash.com/photo-1616367157213-d7ee3548263d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzaGVsZiUyMGxvZ298ZW58MHx8fHwxNzY0MTc1MDE1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "shelf logo"
+    },
+    {
+      "id": "innovation-software",
+      "description": "Abstract green geometric pattern",
+      "imageUrl": "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "abstract geometric"
+    },
+    {
+      "id": "innovation-ai",
+      "description": "Abstract data visualization",
+      "imageUrl": "https://images.unsplash.com/photo-1534665482403-a909d0d97c67?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "data science"
+    },
+    {
+      "id": "innovation-embedded",
+      "description": "Circuit board pattern",
+      "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "circuit board"
+    },
+    {
+      "id": "innovation-vr",
+      "description": "Person using a VR headset",
+      "imageUrl": "https://images.unsplash.com/photo-1639843603410-42574170a4a9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "VR headset"
+    },
+    {
+      "id": "innovation-iot",
+      "description": "Person using a smartphone to control smart home devices",
+      "imageUrl": "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "smart home"
+    },
+    {
+      "id": "innovation-warehouse",
+      "description": "Large, modern warehouse with shelves of goods",
+      "imageUrl": "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%D%3D",
+      "imageHint": "warehouse logistics"
     }
   ]
 }
