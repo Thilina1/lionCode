@@ -65,6 +65,24 @@
       "description": "Image for another blog post",
       "imageUrl": "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkaWdpdGFsJTIwdHJhbnNmb3JtYXRpb258ZW58MHx8fHwxNzY0MTAwOTg1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "digital transformation"
+    },
+    {
+      "id": "product-chatbot",
+      "description": "Chatbot icon",
+      "imageUrl": "https://images.unsplash.com/photo-1679403766665-67ed6cd2df30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaGF0Ym90JTIwbG9nb3xlbnwwfHx8fDE3NjQxNzQ4Njd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chatbot logo"
+    },
+    {
+      "id": "product-cvap",
+      "description": "Cognitive Vision Analytics Platform logo",
+      "imageUrl": "https://images.unsplash.com/photo-1628760584600-6c31148991e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhbmFseXRpY3MlMjBsb2dvfGVufDB8fHx8MTc2NDE3NDU3N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "analytics logo"
+    },
+    {
+      "id": "product-planogram",
+      "description": "Shelf Track logo",
+      "imageUrl": "https://picsum.photos/seed/shelf/150/75",
+      "imageHint": "shelf logo"
     }
   ]
 }
