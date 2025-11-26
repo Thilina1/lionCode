@@ -12,7 +12,7 @@ const blogPosts = [
 
 export default function BlogSection() {
   return (
-    <section className="py-16 md:py-24 bg-background">
+    <section className="py-16 md:py-24 bg-secondary">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">From Our Blog</h2>
@@ -25,7 +25,7 @@ export default function BlogSection() {
             const image = PlaceHolderImages.find(p => p.id === post.id);
             return (
               <Link href={`/blog/${post.id}`} key={post.id}>
-                <Card className="group overflow-hidden transition-all hover:shadow-xl">
+                <Card className="group overflow-hidden transition-all hover:shadow-xl bg-background">
                   {image && (
                     <div className="overflow-hidden">
                        <Image

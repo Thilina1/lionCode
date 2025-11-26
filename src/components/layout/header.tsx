@@ -1,12 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import { Menu } from 'lucide-react';
+import { Menu, Search, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { LionLogo } from '../icons/lion-logo';
+import { ModeToggle } from '../mode-toggle';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -25,40 +26,47 @@ export default function Header() {
       setIsScrolled(window.scrollY > 10);
     };
     window.addEventListener('scroll', handleScroll);
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <header
       className={cn(
-        'sticky top-0 z-50 w-full transition-all duration-300',
+        'fixed top-0 z-50 w-full transition-all duration-300',
         isScrolled ? 'bg-background/80 shadow-md backdrop-blur-sm' : 'bg-transparent'
       )}
     >
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
+      <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2" prefetch={false}>
-          <LionLogo />
-          <span className="font-headline text-lg font-bold text-primary">Lion Code</span>
+          <LionLogo className={cn("h-8 w-8", !isScrolled && "text-white")} />
+          <span className={cn("font-headline text-xl font-bold", isScrolled ? "text-primary" : "text-white")}>Lion Code</span>
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="font-headline text-foreground/80 transition-colors hover:text-primary"
+              className={cn("font-headline transition-colors hover:text-primary", isScrolled ? "text-foreground/80" : "text-white/80 hover:text-white")}
               prefetch={false}
             >
               {link.label}
             </Link>
           ))}
         </nav>
-        <div className="flex items-center gap-4">
-           <Button asChild className="hidden md:flex">
-              <Link href="/contact">Get a Quote</Link>
+        <div className="flex items-center gap-2">
+           <div className="hidden md:flex items-center gap-2">
+            <ModeToggle isScrolled={isScrolled} />
+            <Button variant="ghost" size="icon" className={cn(isScrolled ? "" : "text-white/80 hover:text-white hover:bg-white/10")}>
+              <Search className="h-5 w-5" />
             </Button>
+            <Button variant="ghost" size="icon" className={cn(isScrolled ? "" : "text-white/80 hover:text-white hover:bg-white/10")}>
+              <Mail className="h-5 w-5" />
+            </Button>
+           </div>
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="outline" size="icon" className="md:hidden">
+              <Button variant="outline" size="icon" className={cn("md:hidden", isScrolled ? "" : "text-white bg-transparent border-white/50 hover:bg-white/10 hover:text-white")}>
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
@@ -69,6 +77,15 @@ export default function Header() {
                   <LionLogo />
                   <span className="font-headline text-lg font-bold text-primary">Lion Code</span>
                 </Link>
+                 <div className="flex items-center gap-2">
+                    <ModeToggle isScrolled={true} />
+                    <Button variant="ghost" size="icon" >
+                      <Search className="h-5 w-5" />
+                    </Button>
+                    <Button variant="ghost" size="icon" >
+                      <Mail className="h-5 w-5" />
+                    </Button>
+                  </div>
                 <nav className="grid gap-2 text-base font-medium">
                   {navLinks.map((link) => (
                     <Link
@@ -81,9 +98,6 @@ export default function Header() {
                     </Link>
                   ))}
                 </nav>
-                <Button asChild>
-                  <Link href="/contact">Get a Quote</Link>
-                </Button>
               </div>
             </SheetContent>
           </Sheet>

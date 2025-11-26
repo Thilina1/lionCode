@@ -38,7 +38,7 @@ export default function CaseStudiesSection() {
             const image = PlaceHolderImages.find(p => p.id === study.id);
             return (
               <Link href={`/case-studies/${study.id}`} key={study.id}>
-                <Card className="group overflow-hidden transition-all hover:shadow-xl">
+                <Card className="group overflow-hidden transition-all hover:shadow-xl bg-secondary">
                   {image && (
                     <div className="overflow-hidden">
                        <Image

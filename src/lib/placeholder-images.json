@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero",
-      "description": "Abstract modern office background",
-      "imageUrl": "https://images.unsplash.com/photo-1657978837950-03646a7c7b9e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBvZmZpY2V8ZW58MHx8fHwxNzY0MTQyNzg3fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "modern office"
+      "description": "Abstract technology background with a processor",
+      "imageUrl": "https://images.unsplash.com/photo-1596791428230-22d76a7a285d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "processor technology"
     },
     {
       "id": "service-web",

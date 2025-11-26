@@ -13,7 +13,7 @@ const teamMembers = [
 
 export default function TeamSection() {
   return (
-    <section className="py-16 md:py-24 bg-primary/5">
+    <section className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">Meet Our Leadership</h2>
@@ -25,7 +25,7 @@ export default function TeamSection() {
           {teamMembers.map(member => {
             const image = PlaceHolderImages.find(p => p.id === member.id);
             return (
-              <Card key={member.id} className="text-center overflow-hidden transition-all hover:shadow-xl hover:-translate-y-2">
+              <Card key={member.id} className="text-center overflow-hidden transition-all hover:shadow-xl hover:-translate-y-2 bg-secondary">
                 {image && (
                   <Image
                     src={image.imageUrl}

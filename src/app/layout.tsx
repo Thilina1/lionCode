@@ -4,6 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import ChatWidget from '@/components/chatbot/chat-widget';
+import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
   title: 'Lion Code Technologies',
@@ -23,13 +24,20 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased">
-        <div className="relative flex min-h-screen flex-col">
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </div>
-        <ChatWidget />
-        <Toaster />
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+        >
+          <div className="relative flex min-h-screen flex-col">
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
+          <ChatWidget />
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );
