@@ -69,8 +69,8 @@
     {
       "id": "product-chatbot",
       "description": "Chatbot icon",
-      "imageUrl": "https://images.unsplash.com/photo-1679403766665-67ed6cd2df30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaGF0Ym90JTIwbG9nb3xlbnwwfHx8fDE3NjQxNzQ4Njd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "chatbot logo"
+      "imageUrl": "https://images.unsplash.com/photo-1644035525230-61eae56969da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjaGF0Ym90JTIwYXZhdGFyfGVufDB8fHx8MTc2NDE3NTAxNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chatbot avatar"
     },
     {
       "id": "product-cvap",
@@ -81,7 +81,7 @@
     {
       "id": "product-planogram",
       "description": "Shelf Track logo",
-      "imageUrl": "https://picsum.photos/seed/shelf/150/75",
+      "imageUrl": "https://images.unsplash.com/photo-1616367157213-d7ee3548263d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzaGVsZiUyMGxvZ298ZW58MHx8fHwxNzY0MTc1MDE1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "shelf logo"
     }
   ]
