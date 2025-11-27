@@ -8,6 +8,7 @@ import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { LionLogo } from '../icons/lion-logo';
 import { ModeToggle } from '../mode-toggle';
+import { SriLankaFlagIcon } from '../icons/sri-lanka-flag-icon';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -57,7 +58,8 @@ export default function Header() {
     >
       <div className={cn("transition-all duration-300", topBarColorClass, isTopBarHidden && '-translate-y-full')}>
         <div className="container mx-auto flex h-10 items-center justify-end px-4 md:px-6">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-4">
+                <SriLankaFlagIcon className="h-6 w-6 rounded-sm" />
                 <ModeToggle isScrolled={isScrolled} />
                 <Button variant="ghost" size="icon" className={cn("h-8 w-8", textColorClass, isScrolled ? "" : "hover:bg-white/10")}>
                   <Search className="h-4 w-4" />
@@ -102,6 +104,7 @@ export default function Header() {
                     </Link>
                     <div className="border-b pb-4">
                         <div className="flex items-center justify-end gap-2">
+                            <SriLankaFlagIcon className="h-6 w-6 rounded-sm" />
                             <ModeToggle isScrolled={true} />
                             <Button variant="ghost" size="icon" >
                             <Search className="h-5 w-5" />
