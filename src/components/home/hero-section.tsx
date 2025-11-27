@@ -28,7 +28,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 md:px-6">
         <div className={`max-w-3xl transition-all duration-1000 ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="space-y-4 text-center md:text-left">
-            <p className="font-headline text-sm tracking-widest text-primary uppercase">CUTTING-EDGE</p>
+            <p className="font-headline text-sm tracking-widest text-accent uppercase">CUTTING-EDGE</p>
             <h1 className="font-headline text-4xl font-black tracking-tight sm:text-5xl md:text-7xl text-white">
               IT SOLUTIONS
             </h1>

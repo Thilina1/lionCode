@@ -19,7 +19,7 @@ const technologies = [
   { name: 'Firebase', icon: SiFirebase, color: '#FFCA28' },
   { name: 'Swift', icon: SiSwift, color: '#F05138' },
   { name: 'React', icon: SiReact, color: '#61DAFB' },
-  { name: 'AWS', icon: SiAmazon, color: '#232F3E' },
+  { name: 'AWS', icon: SiAmazon, color: '#FF9900' },
   { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
 ];
 
@@ -39,9 +39,9 @@ export default function TechnologiesSection() {
                     {technologies.map((tech) => {
                       const IconComponent = tech.icon;
                       return (
-                        <Card key={tech.name} className="p-4 bg-secondary/50 border-0 shadow-none transition-all duration-300 hover:bg-secondary hover:-translate-y-2">
+                        <Card key={tech.name} className="p-4 bg-card border shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-2">
                             <CardContent className="flex flex-col items-center justify-center p-2 m-0 gap-2 w-24 h-24">
-                                <IconComponent size={32} color={tech.color} />
+                                <IconComponent size={40} style={{ color: tech.color }} />
                                 <span className="text-sm font-medium text-muted-foreground">{tech.name}</span>
                             </CardContent>
                         </Card>
