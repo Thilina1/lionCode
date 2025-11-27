@@ -7,7 +7,7 @@ export default function HeroSection() {
     <section className="relative h-screen min-h-[600px] w-full flex items-center justify-start text-left md:min-h-[700px]">
       <div className="absolute inset-0 z-[-1]">
         <Image
-          src="/images/hero-background.webp"
+          src="/images/hero-background.png"
           alt="A finger touching a glowing processor, representing advanced technology."
           fill
           className="object-cover"

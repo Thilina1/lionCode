@@ -20,21 +20,36 @@ const navLinks = [
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      const currentScrollY = window.scrollY;
+      const isScrolledDown = currentScrollY > lastScrollY;
+      
+      setIsScrolled(currentScrollY > 10);
+
+      if (currentScrollY > 100 && isScrolledDown) {
+        setIsHidden(true);
+      } else {
+        setIsHidden(false);
+      }
+
+      setLastScrollY(currentScrollY);
     };
-    window.addEventListener('scroll', handleScroll);
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   return (
     <header
       className={cn(
         'fixed top-0 z-50 w-full transition-all duration-300',
-        isScrolled ? 'bg-background/80 shadow-md backdrop-blur-sm' : 'bg-transparent'
+        isScrolled ? 'bg-background/80 shadow-md backdrop-blur-sm' : 'bg-transparent',
+        isHidden && '-translate-y-full'
       )}
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">

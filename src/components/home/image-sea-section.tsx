@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function ImageSeaSection() {
   return (
-    <div className="py-20">
+    <div className="py-20 bg-secondary">
       <div className="container mx-auto">
         <div className="relative">
           <div
@@ -11,7 +11,7 @@ export default function ImageSeaSection() {
           >
             <div className="flex h-full flex-col justify-center p-8 text-white md:p-16">
               <h2 className="text-4xl font-bold leading-tight md:text-5xl">
-                Have a <span className="text-red-500">BIG IDEA</span>
+                Have a <span className="text-red-600">BIG IDEA</span>
               </h2>
               <h3 className="text-3xl font-bold">in mind?</h3>
               <p className="mt-4 text-xl md:text-2xl">
