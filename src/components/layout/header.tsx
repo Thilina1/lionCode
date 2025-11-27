@@ -26,13 +26,14 @@ export default function Header() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      const isScrolledDown = currentScrollY > lastScrollY;
       
       setIsScrolled(currentScrollY > 10);
 
-      if (currentScrollY > 50 && isScrolledDown) {
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        // Scrolling down
         setIsTopBarHidden(true);
       } else {
+        // Scrolling up
         setIsTopBarHidden(false);
       }
 
@@ -40,7 +41,6 @@ export default function Header() {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
