@@ -7,6 +7,7 @@ import BlogSection from '@/components/home/blog-section';
 import { Separator } from '@/components/ui/separator';
 import ProductCollection from '@/components/home/product-collection';
 import InnovationsSection from '@/components/home/innovations-section';
+import ImageSeaSection from '@/components/home/image-sea-section';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <ProductCollection />
       <InnovationsSection />
       <ServicesOverview />
+      <ImageSeaSection />
       <CtaSection />
       <CaseStudiesSection />
       <Separator />
