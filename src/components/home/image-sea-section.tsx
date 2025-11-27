@@ -6,7 +6,7 @@ export default function ImageSeaSection() {
       <div className="container mx-auto">
         <div className="relative">
           <div
-            className="h-96 rounded-xl bg-cover bg-center"
+            className="h-96 rounded-xl bg-cover bg-center bg-fixed"
             style={{ backgroundImage: "url('/images/imagesea.png')" }}
           >
             <div className="flex h-full flex-col justify-center p-8 text-white md:p-16">
@@ -52,8 +52,8 @@ export default function ImageSeaSection() {
             <Image
               src="/images/whale.png"
               alt="Whale"
-              width={600}
-              height={600}
+              width={700}
+              height={700}
             />
           </div>
         </div>
