@@ -13,7 +13,7 @@ export default function CtaSection() {
             Let's discuss how Lion Code Technologies can help you achieve your goals. Our team is ready to build the solutions you need to succeed.
           </p>
           <div className="mt-8">
-            <Button asChild size="lg" variant="default">
+            <Button asChild size="lg" variant="default" className="transition-transform duration-300 hover:scale-105">
               <Link href="/contact">Get in Touch</Link>
             </Button>
           </div>

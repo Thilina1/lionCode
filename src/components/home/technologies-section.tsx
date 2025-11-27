@@ -37,7 +37,7 @@ export default function TechnologiesSection() {
             <div className="relative">
                 <div className="flex justify-center flex-wrap gap-4 md:gap-8">
                     {technologies.map((tech) => (
-                        <Card key={tech.name} className="p-4 bg-secondary/50 border-0 shadow-none">
+                        <Card key={tech.name} className="p-4 bg-secondary/50 border-0 shadow-none transition-all duration-300 hover:bg-secondary hover:-translate-y-2">
                             <CardContent className="flex flex-col items-center justify-center p-2 m-0 gap-2 w-24 h-24">
                                 {tech.icon}
                                 <span className="text-sm font-medium text-muted-foreground">{tech.name}</span>

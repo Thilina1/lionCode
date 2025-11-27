@@ -25,23 +25,25 @@ export default function TeamSection() {
           {teamMembers.map(member => {
             const image = PlaceHolderImages.find(p => p.id === member.id);
             return (
-              <Card key={member.id} className="text-center overflow-hidden transition-all hover:shadow-xl hover:-translate-y-2 bg-secondary">
+              <Card key={member.id} className="group text-center overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 bg-secondary">
                 {image && (
-                  <Image
-                    src={image.imageUrl}
-                    alt={member.name}
-                    width={400}
-                    height={400}
-                    className="object-cover w-full h-80"
-                    data-ai-hint={image.imageHint}
-                  />
+                  <div className="overflow-hidden">
+                    <Image
+                      src={image.imageUrl}
+                      alt={member.name}
+                      width={400}
+                      height={400}
+                      className="object-cover w-full h-80 transition-transform duration-300 group-hover:scale-105"
+                      data-ai-hint={image.imageHint}
+                    />
+                  </div>
                 )}
                 <CardContent className="p-6">
                   <h3 className="font-headline text-xl font-bold">{member.name}</h3>
                   <p className="mt-1 text-sm font-semibold text-primary">{member.role}</p>
                   <div className="mt-4 flex justify-center gap-4">
-                    <Link href="#" className="text-muted-foreground hover:text-primary"><Twitter className="h-5 w-5" /></Link>
-                    <Link href="#" className="text-muted-foreground hover:text-primary"><Linkedin className="h-5 w-5" /></Link>
+                    <Link href="#" className="text-muted-foreground transition-colors hover:text-primary"><Twitter className="h-5 w-5" /></Link>
+                    <Link href="#" className="text-muted-foreground transition-colors hover:text-primary"><Linkedin className="h-5 w-5" /></Link>
                   </div>
                 </CardContent>
               </Card>
@@ -49,7 +51,7 @@ export default function TeamSection() {
           })}
         </div>
         <div className="mt-12 text-center">
-          <Button asChild variant="default">
+          <Button asChild variant="default" className="transition-transform duration-300 hover:scale-105">
             <Link href="/team">Meet The Whole Team <ArrowRight className="ml-2 h-4 w-4" /></Link>
           </Button>
         </div>

@@ -57,7 +57,7 @@ export default function ProductCollection() {
             Discover a range of top-quality products designed to meet your needs and exceed your expectations. Whether you're looking for innovation, durability, or style, our carefully curated selection offers something for everyone. Shop now and experience the best in craftsmanship and value.
           </p>
           <div className="mt-8">
-            <Button asChild size="lg" variant="default">
+            <Button asChild size="lg" variant="default" className="transition-transform duration-300 hover:scale-105">
               <Link href="/contact">Get a Quote</Link>
             </Button>
           </div>
@@ -67,7 +67,7 @@ export default function ProductCollection() {
           {products.map((product) => {
             const image = PlaceHolderImages.find((p) => p.id === product.id);
             return (
-              <Card key={product.id} className="bg-card text-card-foreground text-left shadow-lg">
+              <Card key={product.id} className="bg-card text-card-foreground text-left shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
                 <CardContent className="p-6">
                   <h3 className="mb-4 text-xl font-semibold font-headline">{product.title}</h3>
                   {image && (
