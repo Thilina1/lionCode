@@ -44,78 +44,90 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
+  const topBarColorClass = isScrolled ? 'bg-secondary/80' : 'bg-black/30';
+  const navBarColorClass = isScrolled ? 'bg-background/80 shadow-md backdrop-blur-sm' : 'bg-transparent';
+  const textColorClass = isScrolled ? 'text-foreground/80' : 'text-white/80 hover:text-white';
+
+
   return (
     <header
       className={cn(
         'fixed top-0 z-50 w-full transition-all duration-300',
-        isScrolled ? 'bg-background/80 shadow-md backdrop-blur-sm' : 'bg-transparent',
         isHidden && '-translate-y-full'
       )}
     >
-      <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="flex items-center gap-2" prefetch={false}>
-          <LionLogo className={cn("h-8 w-8", !isScrolled && "text-white")} />
-          <span className={cn("font-headline text-xl font-bold", isScrolled ? "text-primary" : "text-white")}>Lion Code</span>
-        </Link>
-        <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={cn("font-headline transition-colors hover:text-primary", isScrolled ? "text-foreground/80" : "text-white/80 hover:text-white")}
-              prefetch={false}
-            >
-              {link.label}
+      <div className={cn("transition-colors", topBarColorClass)}>
+        <div className="container mx-auto flex h-10 items-center justify-end px-4 md:px-6">
+            <div className="flex items-center gap-2">
+                <ModeToggle isScrolled={isScrolled} />
+                <Button variant="ghost" size="icon" className={cn("h-8 w-8", textColorClass, isScrolled ? "" : "hover:bg-white/10")}>
+                  <Search className="h-4 w-4" />
+                </Button>
+                <Button variant="ghost" size="icon" className={cn("h-8 w-8", textColorClass, isScrolled ? "" : "hover:bg-white/10")}>
+                  <Mail className="h-4 w-4" />
+                </Button>
+            </div>
+        </div>
+      </div>
+      <div className={cn("transition-colors", navBarColorClass)}>
+        <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
+            <Link href="/" className="flex items-center gap-2" prefetch={false}>
+              <LionLogo className={cn("h-8 w-8", !isScrolled && "text-white")} />
+              <span className={cn("font-headline text-xl font-bold", isScrolled ? "text-primary" : "text-white")}>Lion Code</span>
             </Link>
-          ))}
-        </nav>
-        <div className="flex items-center gap-2">
-           <div className="hidden md:flex items-center gap-2">
-            <ModeToggle isScrolled={isScrolled} />
-            <Button variant="ghost" size="icon" className={cn(isScrolled ? "" : "text-white/80 hover:text-white hover:bg-white/10")}>
-              <Search className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon" className={cn(isScrolled ? "" : "text-white/80 hover:text-white hover:bg-white/10")}>
-              <Mail className="h-5 w-5" />
-            </Button>
-           </div>
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="outline" size="icon" className={cn("md:hidden", isScrolled ? "" : "text-white bg-transparent border-white/50 hover:bg-white/10 hover:text-white")}>
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle navigation menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right">
-              <div className="grid gap-4 p-4">
-                <Link href="/" className="flex items-center gap-2" prefetch={false}>
-                  <LionLogo />
-                  <span className="font-headline text-lg font-bold text-primary">Lion Code</span>
-                </Link>
-                 <div className="flex items-center gap-2">
-                    <ModeToggle isScrolled={true} />
-                    <Button variant="ghost" size="icon" >
-                      <Search className="h-5 w-5" />
-                    </Button>
-                    <Button variant="ghost" size="icon" >
-                      <Mail className="h-5 w-5" />
-                    </Button>
-                  </div>
-                <nav className="grid gap-2 text-base font-medium">
-                  {navLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      className="block rounded-lg px-3 py-2 text-foreground/80 transition-colors hover:bg-accent hover:text-accent-foreground"
-                      prefetch={false}
-                    >
-                      {link.label}
+            <div className="flex items-center gap-4">
+              <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={cn("font-headline transition-colors hover:text-primary", textColorClass)}
+                    prefetch={false}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button variant="outline" size="icon" className={cn("md:hidden", isScrolled ? "" : "text-white bg-transparent border-white/50 hover:bg-white/10 hover:text-white")}>
+                    <Menu className="h-6 w-6" />
+                    <span className="sr-only">Toggle navigation menu</span>
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right">
+                  <div className="grid gap-4 p-4">
+                    <Link href="/" className="flex items-center gap-2" prefetch={false}>
+                      <LionLogo />
+                      <span className="font-headline text-lg font-bold text-primary">Lion Code</span>
                     </Link>
-                  ))}
-                </nav>
-              </div>
-            </SheetContent>
-          </Sheet>
+                    <div className="border-b pb-4">
+                        <div className="flex items-center justify-end gap-2">
+                            <ModeToggle isScrolled={true} />
+                            <Button variant="ghost" size="icon" >
+                            <Search className="h-5 w-5" />
+                            </Button>
+                            <Button variant="ghost" size="icon" >
+                            <Mail className="h-5 w-5" />
+                            </Button>
+                        </div>
+                    </div>
+                    <nav className="grid gap-2 text-base font-medium">
+                      {navLinks.map((link) => (
+                        <Link
+                          key={link.href}
+                          href={link.href}
+                          className="block rounded-lg px-3 py-2 text-foreground/80 transition-colors hover:bg-accent hover:text-accent-foreground"
+                          prefetch={false}
+                        >
+                          {link.label}
+                        </Link>
+                      ))}
+                    </nav>
+                  </div>
+                </SheetContent>
+              </Sheet>
+            </div>
         </div>
       </div>
     </header>
