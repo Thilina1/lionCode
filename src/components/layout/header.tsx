@@ -20,7 +20,7 @@ const navLinks = [
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isHidden, setIsHidden] = useState(false);
+  const [isTopBarHidden, setIsTopBarHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
@@ -30,10 +30,10 @@ export default function Header() {
       
       setIsScrolled(currentScrollY > 10);
 
-      if (currentScrollY > 100 && isScrolledDown) {
-        setIsHidden(true);
+      if (currentScrollY > 50 && isScrolledDown) {
+        setIsTopBarHidden(true);
       } else {
-        setIsHidden(false);
+        setIsTopBarHidden(false);
       }
 
       setLastScrollY(currentScrollY);
@@ -53,10 +53,9 @@ export default function Header() {
     <header
       className={cn(
         'fixed top-0 z-50 w-full transition-all duration-300',
-        isHidden && '-translate-y-full'
       )}
     >
-      <div className={cn("transition-colors", topBarColorClass)}>
+      <div className={cn("transition-all duration-300", topBarColorClass, isTopBarHidden && '-translate-y-full')}>
         <div className="container mx-auto flex h-10 items-center justify-end px-4 md:px-6">
             <div className="flex items-center gap-2">
                 <ModeToggle isScrolled={isScrolled} />
@@ -69,7 +68,7 @@ export default function Header() {
             </div>
         </div>
       </div>
-      <div className={cn("transition-colors", navBarColorClass)}>
+      <div className={cn("transition-all duration-300", navBarColorClass, isTopBarHidden && '-translate-y-10')}>
         <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
             <Link href="/" className="flex items-center gap-2" prefetch={false}>
               <LionLogo className={cn("h-8 w-8", !isScrolled && "text-white")} />
