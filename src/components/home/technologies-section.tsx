@@ -6,7 +6,7 @@ import {
     SiFirebase,
     SiSwift,
     SiReact,
-    SiAmazonaws,
+    SiAmazon,
     SiMongodb,
     SiPostgresql
 } from '@icons-pack/react-simple-icons';
@@ -19,7 +19,7 @@ const technologies = [
   { name: 'Firebase', icon: <SiFirebase size={32} /> },
   { name: 'Swift', icon: <SiSwift size={32} /> },
   { name: 'React', icon: <SiReact size={32} /> },
-  { name: 'AWS', icon: <SiAmazonaws size={32} /> },
+  { name: 'AWS', icon: <SiAmazon size={32} /> },
   { name: 'MongoDB', icon: <SiMongodb size={32} /> },
 ];
 
