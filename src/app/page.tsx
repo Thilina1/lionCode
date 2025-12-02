@@ -9,6 +9,7 @@ import ProductCollection from '@/components/home/product-collection';
 import InnovationsSection from '@/components/home/innovations-section';
 import ImageSeaSection from '@/components/home/image-sea-section';
 import TechnologiesSection from '@/components/home/technologies-section';
+import TrustedClientsSection from '@/components/home/trusted-clients-section';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <InnovationsSection />
       <ImageSeaSection />
       <TechnologiesSection />
+      <TrustedClientsSection />
       <CaseStudiesSection />  
       <CtaSection />
       <Separator />
