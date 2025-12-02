@@ -21,9 +21,7 @@ export default function TrustedClientsSection() {
             const image = PlaceHolderImages.find(p => p.id === client.id);
             if (!image) return null;
 
-            const imageStyle = client.id === 'logo-tuk-tuk-drive' 
-              ? '' 
-              : 'grayscale opacity-60 hover:grayscale-0 hover:opacity-100';
+            const imageStyle = 'grayscale opacity-60 hover:grayscale-0 hover:opacity-100';
 
             return (
               <div key={client.id} className={`relative h-24 w-48 transition-all duration-300 ${imageStyle}`}>
