@@ -1,3 +1,5 @@
+'use client';
+
 import { Card, CardContent } from "@/components/ui/card";
 import {
     SiFlutter,
@@ -8,22 +10,47 @@ import {
     SiReact,
     SiAmazon,
     SiMongodb,
-    SiPostgresql
+    SiPostgresql,
+    SiDocker,
+    SiPython,
+    SiNodedotjs,
+    SiTypescript,
+    SiGo,
+    SiVuedotjs,
+    SiAngular,
+    SiSharp,
+    SiDotnet,
+    SiRubyonrails
 } from '@icons-pack/react-simple-icons';
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 const technologies = [
   { name: 'Flutter', icon: SiFlutter, color: '#02569B' },
-  { name: 'Next.js', icon: SiNextdotjs, color: '#000000' },
-  { name: 'SQL', icon: SiPostgresql, color: '#336791' },
+  { name: 'Next.js', icon: SiNextdotjs, color: '#000000', darkColor: '#FFFFFF' },
   { name: 'Google Cloud', icon: SiGooglecloud, color: '#4285F4' },
   { name: 'Firebase', icon: SiFirebase, color: '#FFCA28' },
   { name: 'Swift', icon: SiSwift, color: '#F05138' },
   { name: 'React', icon: SiReact, color: '#61DAFB' },
   { name: 'AWS', icon: SiAmazon, color: '#FF9900' },
   { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
+  { name: 'Docker', icon: SiDocker, color: '#2496ED' },
+  { name: 'Python', icon: SiPython, color: '#3776AB' },
+  { name: 'Node.js', icon: SiNodedotjs, color: '#339933' },
+  { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
+  { name: 'Go', icon: SiGo, color: '#00ADD8' },
+  { name: 'Vue.js', icon: SiVuedotjs, color: '#4FC08D' },
+  { name: 'Angular', icon: SiAngular, color: '#DD0031' },
 ];
 
 export default function TechnologiesSection() {
+  const { resolvedTheme } = useTheme();
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return (
     <section className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
@@ -38,10 +65,11 @@ export default function TechnologiesSection() {
                 <div className="flex justify-center flex-wrap gap-4 md:gap-8">
                     {technologies.map((tech) => {
                       const IconComponent = tech.icon;
+                      const color = isMounted && resolvedTheme === 'dark' && tech.darkColor ? tech.darkColor : tech.color;
                       return (
                         <Card key={tech.name} className="p-4 bg-card border shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-2">
                             <CardContent className="flex flex-col items-center justify-center p-2 m-0 gap-2 w-24 h-24">
-                                <IconComponent size={40} style={{ color: tech.color }} />
+                                <IconComponent size={40} style={{ color: color }} />
                                 <span className="text-sm font-medium text-muted-foreground">{tech.name}</span>
                             </CardContent>
                         </Card>

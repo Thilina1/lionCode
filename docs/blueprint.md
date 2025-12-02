@@ -12,10 +12,10 @@
 
 ## Style Guidelines:
 
-- Primary color: Deep blue (#002D72), inspired by Zone24x7, to convey trust and expertise. white, black, red, yellow
-- Secondary color: Light blue (#007ACE), mirroring Zone24x7, for a modern and tech-forward feel.
-- Accent color: Teal (#00A79D), drawn from Zone24x7, to highlight key interactive elements.
-- Headline font: 'Roboto', a modern sans-serif, for clear and impactful headlines (as seen on Zone24x7).
-- Body font: 'Open Sans', a legible and friendly sans-serif, ensuring readability similar to Zone24x7.
-- Clean and professional icons, consistent with Zone24x7, to represent services and solutions.
-- Subtle animations for a polished user experience, inspired by Zone24x7's modern design.
+- Primary color: Deep blue (#002D72), inspired by lioncode, to convey trust and expertise. white, black, red, yellow
+- Secondary color: Light blue (#007ACE), mirroring lioncode, for a modern and tech-forward feel.
+- Accent color: Teal (#00A79D), drawn from lioncode, to highlight key interactive elements.
+- Headline font: 'Roboto', a modern sans-serif, for clear and impactful headlines (as seen on lioncode).
+- Body font: 'Open Sans', a legible and friendly sans-serif, ensuring readability similar to lioncode.
+- Clean and professional icons, consistent with lioncode, to represent services and solutions.
+- Subtle animations for a polished user experience, inspired by lioncode's modern design.

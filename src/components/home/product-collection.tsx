@@ -1,28 +1,29 @@
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
 import Link from 'next/link';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
-const products = [
+const expertises = [
   {
-    id: 'product-chatbot',
-    title: 'Chatbot',
-    description: 'Our chatbot solution is designed to enhance customer engagement and support. This intelligent chatbot utilizes natural language processing and providing real-time assistance and information.',
+    id: 'expertise-frontend',
+    title: 'Frontend Development',
+    description: 'We build beautiful and responsive user interfaces using modern frontend frameworks like React, Vue, and Angular.',
   },
   {
-    id: 'product-cvap',
-    title: 'CVAP (Cognitive Vision Analytics)',
-    description: 'CVAP uses AI to analyze visual data, enabling real-time object detection, activity recognition, and insights to improve efficiency, safety, and customer experiences across industries.',
+    id: 'expertise-backend',
+    title: 'Backend Development',
+    description: 'Our backend solutions are robust, scalable, and secure, built with technologies like Node.js, Python, and Go.',
   },
   {
-    id: 'product-planogram',
-    title: 'Planogram',
-    description: 'Planograms empower retailers to create a cohesive and inviting shopping experience while maximizing sales potential and improving inventory management.',
+    id: 'expertise-cloud',
+    title: 'Cloud & DevOps',
+    description: 'We leverage cloud platforms like AWS, Azure, and Google Cloud to build and deploy scalable and reliable infrastructure.',
   },
 ];
 
-export default function ProductCollection() {
+export default function ExpertiseSection() {
   return (
     <section className="relative py-16 md:py-24 bg-background text-foreground overflow-hidden">
       <div
@@ -48,13 +49,13 @@ export default function ProductCollection() {
         <div className="mx-auto max-w-4xl text-center">
           <div className="mb-4 flex items-center justify-center">
             <div className="flex items-center gap-3 rounded-md bg-primary px-4 py-1.5 text-sm font-bold text-primary-foreground">
-              <span>PRODUCT</span>
+              <span>EXPERTISE</span>
               <div className="h-0.5 w-10 rounded-full bg-primary-foreground" />
             </div>
           </div>
-          <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">Explore Our Premium Product Collection</h2>
+          <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">Our Expertise</h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Discover a range of top-quality products designed to meet your needs and exceed your expectations. Whether you're looking for innovation, durability, or style, our carefully curated selection offers something for everyone. Shop now and experience the best in craftsmanship and value.
+            We have a wide range of expertise in various technologies and platforms. Our team is dedicated to delivering high-quality solutions that meet your business needs. 
           </p>
           <div className="mt-8">
             <Button asChild size="lg" variant="default" className="transition-transform duration-300 hover:scale-105">
@@ -64,25 +65,25 @@ export default function ProductCollection() {
         </div>
 
         <div className="mt-16 grid gap-8 md:grid-cols-3">
-          {products.map((product) => {
-            const image = PlaceHolderImages.find((p) => p.id === product.id);
+          {expertises.map((expertise) => {
+            const image = PlaceHolderImages.find((p) => p.id === expertise.id);
             return (
-              <Card key={product.id} className="bg-card text-card-foreground text-left shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+              <Card key={expertise.id} className="bg-card text-card-foreground text-left shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
                 <CardContent className="p-6">
-                  <h3 className="mb-4 text-xl font-semibold font-headline">{product.title}</h3>
+                  <h3 className="mb-4 text-xl font-semibold font-headline">{expertise.title}</h3>
                   {image && (
                      <div className="mb-4 flex items-center justify-start h-20">
                       <Image
                         src={image.imageUrl}
-                        alt={`${product.title} logo`}
-                        width={product.id === 'product-chatbot' ? 80 : 150}
-                        height={product.id === 'product-chatbot' ? 80 : 75}
-                        className={`object-contain ${product.id === 'product-chatbot' ? 'rounded-full' : ''}`}
+                        alt={`${expertise.title} logo`}
+                        width={150}
+                        height={75}
+                        className={`object-contain`}
                         data-ai-hint={image.imageHint}
                       />
                     </div>
                   )}
-                  <p className="text-muted-foreground">{product.description}</p>
+                  <p className="text-muted-foreground">{expertise.description}</p>
                 </CardContent>
               </Card>
             );

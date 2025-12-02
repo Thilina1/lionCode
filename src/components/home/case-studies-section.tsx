@@ -1,3 +1,4 @@
+
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -7,14 +8,14 @@ import { ArrowRight } from 'lucide-react';
 
 const caseStudies = [
   {
-    id: 'case-study-1',
-    title: 'Automating Logistics for a Top Retailer',
-    category: 'Business Automation',
+    id: 'case-study-3',
+    title: 'Tuk Tuk Drive: Automated Booking Web App',
+    category: 'Web Application',
   },
   {
-    id: 'case-study-2',
-    title: 'E-Commerce Platform for a Fashion Brand',
-    category: 'Web Development',
+    id: 'case-study-4',
+    title: 'Victoria Retreat: Hotel Booking Management',
+    category: 'Hospitality Solutions',
   },
 ];
 

@@ -35,6 +35,9 @@ export default function HeroSection() {
             <h2 className="font-headline text-4xl font-black tracking-tight sm:text-5xl md:text-7xl text-primary">
               FOR ALL BUSINESSES
             </h2>
+            <p className="text-lg text-gray-300 md:text-xl">
+              We provide innovative and customized IT solutions to help your business grow and succeed in the digital age. From web development to cloud computing, our team of experts is here to support you.
+            </p>
             <div className="pt-4">
               <Button asChild size="lg" className="transition-transform duration-300 hover:scale-105">
                 <Link href="/contact">CONTACT</Link>

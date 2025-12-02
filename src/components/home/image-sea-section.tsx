@@ -20,30 +20,33 @@ export default function ImageSeaSection() {
               <div className="mt-8 flex items-center">
                 <div className="flex -space-x-4">
                   <Image
-                    src="/images/a.webp"
-                    alt="Avatar 1"
+                    src="https://picsum.photos/seed/expert1/40/40"
+                    alt="Expert avatar 1"
                     width={40}
                     height={40}
                     className="rounded-full border-2 border-white"
+                    data-ai-hint="person portrait"
                   />
                   <Image
-                    src="/images/a.webp"
-                    alt="Avatar 2"
+                    src="https://picsum.photos/seed/expert2/40/40"
+                    alt="Expert avatar 2"
                     width={40}
                     height={40}
                     className="rounded-full border-2 border-white"
+                    data-ai-hint="person portrait"
                   />
                   <Image
-                    src="/images/a.webp"
-                    alt="Avatar 3"
+                    src="https://picsum.photos/seed/expert3/40/40"
+                    alt="Expert avatar 3"
                     width={40}
                     height={40}
                     className="rounded-full border-2 border-white"
+                    data-ai-hint="person portrait"
                   />
                 </div>
                 <div className="ml-4">
                   <p className="font-bold">Talk to an expert</p>
-                  <p>marketing@zone24x7.com</p>
+                  <p>marketing@lioncode.com</p>
                 </div>
               </div>
             </div>

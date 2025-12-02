@@ -31,6 +31,18 @@
       "imageHint": "data analytics"
     },
     {
+      "id": "case-study-3",
+      "description": "A web application for booking and managing tuk-tuk rides, automating the entire process.",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkYXRhJTIwYW5hbHl0aWNzfGVufDB8fHx8MTc2NDExNDk3MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "A web application for booking and managing tuk-tuk rides, automating the entire process."
+    },
+    {
+      "id": "case-study-4",
+      "description": "A hotel management system that helps to manage bookings and other hotel operations.",
+      "imageUrl": "https://images.unsplash.com/photo-1686771416282-3888ddaf249b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8fHwxNzY0MTUwODk0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "A hotel management system that helps to manage bookings and other hotel operations."
+    },
+    {
       "id": "team-member-1",
       "description": "Profile picture of a team member",
       "imageUrl": "https://images.unsplash.com/photo-1655249493799-9cee4fe983bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjQxMDg1NjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -61,22 +73,22 @@
       "imageHint": "digital transformation"
     },
     {
-      "id": "product-chatbot",
-      "description": "Chatbot icon",
-      "imageUrl": "https://images.unsplash.com/photo-1644035525230-61eae56969da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjaGF0Ym90JTIwYXZhdGFyfGVufDB8fHx8MTc2NDE3NTAxNXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "chatbot avatar"
-    },
-    {
-      "id": "product-cvap",
-      "description": "Cognitive Vision Analytics Platform logo",
+      "id": "expertise-frontend",
+      "description": "Frontend Development Expertise",
       "imageUrl": "https://images.unsplash.com/photo-1628760584600-6c31148991e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhbmFseXRpY3MlMjBsb2dvfGVufDB8fHx8MTc2NDE3NDU3N3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "analytics logo"
     },
     {
-      "id": "product-planogram",
-      "description": "Shelf Track logo",
+      "id": "expertise-backend",
+      "description": "Backend Development Expertise",
       "imageUrl": "https://images.unsplash.com/photo-1616367157213-d7ee3548263d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzaGVsZiUyMGxvZ298ZW58MHx8fHwxNzY0MTc1MDE1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "shelf logo"
+    },
+    {
+      "id": "expertise-cloud",
+      "description": "Cloud & DevOps Expertise",
+      "imageUrl": "https://images.unsplash.com/photo-1644035525230-61eae56969da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjaGF0Ym90JTIwYXZhdGFyfGVufDB8fHx8MTc2NDE3NTAxNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chatbot avatar"
     },
     {
       "id": "innovation-software",
@@ -111,7 +123,7 @@
     {
       "id": "innovation-warehouse",
       "description": "Large, modern warehouse with shelves of goods",
-      "imageUrl": "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%D%3D",
+      "imageUrl": "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "warehouse logistics"
     }
   ]

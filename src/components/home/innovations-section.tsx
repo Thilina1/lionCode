@@ -18,14 +18,8 @@ const innovations = [
     {
         id: 'innovation-embedded',
         preTitle: 'Streamline With',
-        title: 'Embedded Systems Solutions',
-        gridClass: 'md:col-span-1 md:row-span-2',
-    },
-    {
-        id: 'innovation-vr',
-        preTitle: 'Productivity Improvements With',
-        title: 'Technology Innovation',
-        gridClass: 'md:col-span-1',
+        title: 'Web Development',
+        gridClass: 'md:col-span-1 md:row-span-3',
     },
     {
         id: 'innovation-iot',
@@ -36,7 +30,7 @@ const innovations = [
     {
         id: 'innovation-warehouse',
         preTitle: 'PROFESSIONAL SERVICES',
-        title: 'Next Gen Warehousing & Logistics',
+        title: 'Mobile Application Development',
         gridClass: 'md:col-span-2 md:row-span-2',
     },
 ];
@@ -58,7 +52,7 @@ export default function InnovationsSection() {
                     </p>
                 </div>
 
-                <div className="mt-16 grid gap-4 md:grid-cols-4 md:grid-rows-3">
+                <div className="mt-16 grid gap-4 md:grid-cols-3 md:grid-rows-3">
                      {innovations.map(item => {
                         const image = PlaceHolderImages.find(p => p.id === item.id);
                         if (!image) return null;
