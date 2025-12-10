@@ -91,41 +91,23 @@ export default function Header() {
               </nav>
               <Sheet>
                 <SheetTrigger asChild>
-                  <Button variant="outline" size="icon" className={cn("md:hidden", isScrolled ? "" : "text-white bg-transparent border-white/50 hover:bg-white/10 hover:text-white")}>
+                  <Button variant="outline" size="icon" className="md:hidden">
                     <Menu className="h-6 w-6" />
                     <span className="sr-only">Toggle navigation menu</span>
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="right">
                   <div className="grid gap-4 p-4">
-                    <Link href="/" className="flex items-center gap-2" prefetch={false}>
-                      <LionLogo />
-                      <span className="font-headline text-lg font-bold text-primary">Lion Code</span>
-                    </Link>
-                    <div className="border-b pb-4">
-                        <div className="flex items-center justify-end gap-2">
-                            <SriLankaFlagIcon />
-                            <ModeToggle isScrolled={true} />
-                            <Button variant="ghost" size="icon" >
-                            <Search className="h-5 w-5" />
-                            </Button>
-                            <Button variant="ghost" size="icon" >
-                            <Mail className="h-5 w-5" />
-                            </Button>
-                        </div>
-                    </div>
-                    <nav className="grid gap-2 text-base font-medium">
-                      {navLinks.map((link) => (
-                        <Link
-                          key={link.href}
-                          href={link.href}
-                          className="block rounded-lg px-3 py-2 text-foreground/80 transition-colors hover:bg-accent hover:text-accent-foreground"
-                          prefetch={false}
-                        >
-                          {link.label}
-                        </Link>
-                      ))}
-                    </nav>
+                    {navLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className="block rounded-lg px-3 py-2 text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+                        prefetch={false}
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
                   </div>
                 </SheetContent>
               </Sheet>
