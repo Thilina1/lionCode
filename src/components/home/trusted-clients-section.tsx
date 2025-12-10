@@ -8,7 +8,7 @@ const clients = [
 
 export default function TrustedClientsSection() {
   return (
-    <section className="py-16 md:py-24 bg-secondary">
+    <section className="py-16 md:py-24 bg-gray-700">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">Trusted By Leading Businesses</h2>
