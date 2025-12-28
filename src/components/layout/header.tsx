@@ -1,14 +1,13 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, Search, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { LionLogo } from '../icons/lion-logo';
 import { ModeToggle } from '../mode-toggle';
-import { SriLankaFlagIcon } from '../icons/sri-lanka-flag-icon';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -59,7 +58,7 @@ export default function Header() {
       <div className={cn("transition-all duration-300", topBarColorClass, isTopBarHidden && '-translate-y-full')}>
         <div className="container mx-auto flex h-10 items-center justify-end px-4 md:px-6">
             <div className="flex items-center gap-4">
-                <SriLankaFlagIcon />
+                <text>🇱🇰</text>
                 <ModeToggle isScrolled={isScrolled} />
                 <Button variant="ghost" size="icon" className={cn("h-8 w-8", textColorClass, isScrolled ? "" : "hover:bg-white/10")}>
                   <Search className="h-4 w-4" />
@@ -73,7 +72,7 @@ export default function Header() {
       <div className={cn("transition-all duration-300", navBarColorClass, isTopBarHidden && '-translate-y-10')}>
         <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
             <Link href="/" className="flex items-center gap-2" prefetch={false}>
-              <LionLogo className={cn("h-8 w-8", !isScrolled && "text-white")} />
+              <Image src="/logo.png" alt="Lion Code Logo" width={32} height={32} className={cn(!isScrolled && "brightness-0 invert")}/>
               <span className={cn("font-headline text-xl font-bold", isScrolled ? "text-primary" : "text-white")}>Lion Code</span>
             </Link>
             <div className="flex items-center gap-4">
