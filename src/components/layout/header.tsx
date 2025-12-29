@@ -66,7 +66,7 @@ export default function Header() {
         <div className="container mx-auto flex h-10 items-center justify-end px-4 md:px-6">
             <div className="flex items-center gap-4">
                 <span>🇱🇰</span>
-                <ModeToggle isScrolled={isScrolled} />
+                <ModeToggle className={modeToggleColorClass} />
                 <Button variant="ghost" size="icon" className={cn("h-8 w-8", textColorClass, iconButtonColorClass)}>
                   <Search className="h-4 w-4" />
                 </Button>
