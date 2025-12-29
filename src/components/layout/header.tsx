@@ -8,6 +8,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { ModeToggle } from '../mode-toggle';
+import { usePathname } from 'next/navigation';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -22,6 +23,8 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isTopBarHidden, setIsTopBarHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,10 +47,14 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
-  const topBarColorClass = isScrolled ? 'bg-secondary/80' : 'bg-black/30';
-  const navBarColorClass = isScrolled ? 'bg-background/80 shadow-md backdrop-blur-sm' : 'bg-transparent';
-  const textColorClass = isScrolled ? 'text-foreground/80' : 'text-white/80 hover:text-white';
+  const showTransparentHeader = isHomePage && !isScrolled;
 
+  const topBarColorClass = showTransparentHeader ? 'bg-black/30' : 'bg-secondary/80';
+  const navBarColorClass = showTransparentHeader ? 'bg-transparent' : 'bg-background/80 shadow-md backdrop-blur-sm';
+  const textColorClass = showTransparentHeader ? 'text-white/80 hover:text-white' : 'text-foreground/80';
+  const logoColorClass = showTransparentHeader ? 'brightness-0 invert' : 'dark:brightness-0 dark:invert';
+  const modeToggleColorClass = showTransparentHeader ? 'text-white/80 hover:text-white hover:bg-white/10' : '';
+  const iconButtonColorClass = showTransparentHeader ? 'hover:bg-white/10' : '';
 
   return (
     <header
@@ -60,10 +67,10 @@ export default function Header() {
             <div className="flex items-center gap-4">
                 <span>🇱🇰</span>
                 <ModeToggle isScrolled={isScrolled} />
-                <Button variant="ghost" size="icon" className={cn("h-8 w-8", textColorClass, isScrolled ? "" : "hover:bg-white/10")}>
+                <Button variant="ghost" size="icon" className={cn("h-8 w-8", textColorClass, iconButtonColorClass)}>
                   <Search className="h-4 w-4" />
                 </Button>
-                <Button variant="ghost" size="icon" className={cn("h-8 w-8", textColorClass, isScrolled ? "" : "hover:bg-white/10")}>
+                <Button variant="ghost" size="icon" className={cn("h-8 w-8", textColorClass, iconButtonColorClass)}>
                   <Mail className="h-4 w-4" />
                 </Button>
             </div>
@@ -72,8 +79,8 @@ export default function Header() {
       <div className={cn("transition-all duration-300", navBarColorClass, isTopBarHidden && '-translate-y-10')}>
         <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
             <Link href="/" className="flex items-center gap-2" prefetch={false}>
-              <Image src="/images/logo.png" alt="Lion Code Logo" width={96} height={96} className={cn(!isScrolled && "brightness-0 invert", "dark:brightness-0 dark:invert")}/>
-              <span className={cn("font-headline text-xl font-bold", isScrolled ? "text-primary" : "text-white")}></span>
+              <Image src="/images/logo.png" alt="Lion Code Logo" width={96} height={96} className={cn(logoColorClass, "dark:brightness-0 dark:invert")}/>
+              <span className={cn("font-headline text-xl font-bold", showTransparentHeader ? "text-white" : "text-primary")}></span>
             </Link>
             <div className="flex items-center gap-4">
               <nav className="hidden items-center gap-6 text-medium font-medium md:flex">

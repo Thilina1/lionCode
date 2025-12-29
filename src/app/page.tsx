@@ -15,16 +15,18 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <ServicesOverview />
-      <InnovationsSection />
-      <ImageSeaSection />
-      <TechnologiesSection />
-      <TrustedClientsSection />
-      <CaseStudiesSection />  
-      <CtaSection />
-      <Separator />
-      <Separator />
-      <BlogSection />
+      <div className="bg-background">
+        <ServicesOverview />
+        <InnovationsSection />
+        <ImageSeaSection />
+        <TechnologiesSection />
+        <TrustedClientsSection />
+        <CaseStudiesSection />  
+        <CtaSection />
+        <Separator />
+        <Separator />
+        <BlogSection />
+      </div>
     </>
   );
 }
