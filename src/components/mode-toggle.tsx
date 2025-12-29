@@ -8,7 +8,16 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 
 export function ModeToggle({ className }: { className?: string }) {
-  const { theme, setTheme } = useTheme()
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return <Button variant="ghost" size="icon" className={cn(className)} disabled></Button>;
+  }
 
   return (
     <Button 
