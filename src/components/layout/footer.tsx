@@ -7,18 +7,18 @@ export default function Footer() {
     <footer className="bg-secondary border-t">
       <div className="container mx-auto px-4 py-8 md:px-6">
         <div className="grid gap-8 md:grid-cols-3">
-          <div className="space-y-4">
+          <div className="space-y-4 flex flex-col items-center">
             <Link href="/" className="flex items-center gap-2" prefetch={false}>
-              <LionLogo />
               <span className="font-headline text-xl font-bold text-primary">Lion Code Technologies</span>
             </Link>
-            <p className="text-muted-foreground">
+            <LionLogo width={48} height={48} />
+            <p className="text-muted-foreground text-center">
               Automating business processes and solving business problems using IT.
             </p>
             <div className="flex gap-4">
-              <Link href="#" aria-label="Twitter" className="text-muted-foreground hover:text-primary"><Twitter className="h-5 w-5" /></Link>
-              <Link href="#" aria-label="Facebook" className="text-muted-foreground hover:text-primary"><Facebook className="h-5 w-5" /></Link>
-              <Link href="#" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary"><Linkedin className="h-5 w-5" /></Link>
+              <Link href="https://web.facebook.com/profile.php?id=61583633541519" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground hover:text-primary"><Twitter className="h-5 w-5" /></Link>
+              <Link href="https://web.facebook.com/profile.php?id=61583633541519" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-muted-foreground hover:text-primary"><Facebook className="h-5 w-5" /></Link>
+              <Link href="https://web.facebook.com/profile.php?id=61583633541519" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary"><Linkedin className="h-5 w-5" /></Link>
             </div>
           </div>
           <div className="md:col-span-2">

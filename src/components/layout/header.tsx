@@ -58,7 +58,7 @@ export default function Header() {
       <div className={cn("transition-all duration-300", topBarColorClass, isTopBarHidden && '-translate-y-full')}>
         <div className="container mx-auto flex h-10 items-center justify-end px-4 md:px-6">
             <div className="flex items-center gap-4">
-                <text>🇱🇰</text>
+                <span>🇱🇰</span>
                 <ModeToggle isScrolled={isScrolled} />
                 <Button variant="ghost" size="icon" className={cn("h-8 w-8", textColorClass, isScrolled ? "" : "hover:bg-white/10")}>
                   <Search className="h-4 w-4" />
@@ -72,8 +72,8 @@ export default function Header() {
       <div className={cn("transition-all duration-300", navBarColorClass, isTopBarHidden && '-translate-y-10')}>
         <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
             <Link href="/" className="flex items-center gap-2" prefetch={false}>
-              <Image src="/logo.png" alt="Lion Code Logo" width={32} height={32} className={cn(!isScrolled && "brightness-0 invert")}/>
-              <span className={cn("font-headline text-xl font-bold", isScrolled ? "text-primary" : "text-white")}>Lion Code</span>
+              <Image src="/images/logo.png" alt="Lion Code Logo" width={96} height={96} className={cn(!isScrolled && "brightness-0 invert", "dark:brightness-0 dark:invert")}/>
+              <span className={cn("font-headline text-xl font-bold", isScrolled ? "text-primary" : "text-white")}></span>
             </Link>
             <div className="flex items-center gap-4">
               <nav className="hidden items-center gap-6 text-medium font-medium md:flex">

@@ -11,7 +11,7 @@ const innovations = [
     },
     {
         id: 'innovation-ai',
-        preTitle: 'Omni-channel Personalized Product Recommendations With',
+        preTitle: '',
         title: 'Artificial Intelligence & Data Science',
         gridClass: 'md:col-span-1',
     },
