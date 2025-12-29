@@ -5,7 +5,7 @@ import Link from 'next/link';
 const innovations = [
     {
         id: 'innovation-software',
-        preTitle: 'Delivering Enduring Growth With',
+        preTitle: '',
         title: 'Software Engineering Solutions',
         gridClass: 'md:col-span-1 md:row-span-2',
     },
@@ -17,19 +17,19 @@ const innovations = [
     },
     {
         id: 'innovation-embedded',
-        preTitle: 'Streamline With',
+        preTitle: '',
         title: 'Web Development',
         gridClass: 'md:col-span-1 md:row-span-3',
     },
     {
         id: 'innovation-iot',
-        preTitle: 'Remote Monitoring With',
+        preTitle: '',
         title: 'IoT & IoB',
         gridClass: 'md:col-span-1',
     },
     {
         id: 'innovation-warehouse',
-        preTitle: 'PROFESSIONAL SERVICES',
+        preTitle: '',
         title: 'Mobile Application Development',
         gridClass: 'md:col-span-2 md:row-span-2',
     },

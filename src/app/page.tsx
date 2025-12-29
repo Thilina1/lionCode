@@ -24,7 +24,6 @@ export default function Home() {
       <CtaSection />
       <Separator />
       <Separator />
-      <TeamSection />
       <BlogSection />
     </>
   );
