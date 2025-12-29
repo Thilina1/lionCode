@@ -1,7 +1,8 @@
+
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle, ArrowRight, Server, Database, Monitor, Library } from 'lucide-react';
+import { ArrowRight, Monitor, Server, Library } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
@@ -201,3 +202,5 @@ export default function TukTukCaseStudyPage() {
     </div>
   );
 }
+
+    
