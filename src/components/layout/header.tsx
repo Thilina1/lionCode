@@ -53,7 +53,7 @@ export default function Header() {
   const navBarColorClass = showTransparentHeader ? 'bg-transparent' : 'bg-background/80 shadow-md backdrop-blur-sm';
   const textColorClass = showTransparentHeader ? 'text-white/80 hover:text-white' : 'text-foreground/80';
   const logoColorClass = showTransparentHeader ? 'brightness-0 invert' : 'dark:brightness-0 dark:invert';
-  const modeToggleColorClass = showTransparentHeader ? 'text-white/80 hover:text-white hover:bg-white/10' : '';
+  const modeToggleColorClass = showTransparentHeader ? 'text-white/80 hover:text-white hover:bg-white/10' : 'text-foreground/80';
   const iconButtonColorClass = showTransparentHeader ? 'hover:bg-white/10' : '';
 
   return (
