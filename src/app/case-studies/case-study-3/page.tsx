@@ -92,19 +92,6 @@ const customizableExtras = [
     { title: "Special Transfers", description: "The platform can handle logistical requests, like transferring a tuk-tuk to or from a train station, with an associated cost." }
 ];
 
-const codeSnippet = `
-// Simplified logic from the codebase
-return (
-  rentalDays * tukCount * perDayCharge + // Base rental cost
-  licenseCount * licenseCharge +       // Extra: Licenses
-  extrasTotal +                        // Extra: Other items (e.g., baby seats)
-  trainTransferCost +                  // Extra: Special transfers
-  pickupPrice +                        // Dynamic: Location-based fees
-  returnPrice +                        // Dynamic: Location-based fees
-  50                                   // Fixed service fee
-);
-`;
-
 export default function TukTukCaseStudyPage() {
   const image = PlaceHolderImages.find(p => p.id === 'case-study-3');
 
@@ -173,7 +160,7 @@ export default function TukTukCaseStudyPage() {
              <p className="mt-4 text-lg text-muted-foreground text-center">
                 The platform moves beyond simple fixed pricing, utilizing a dynamic price calculation engine that builds the total rental cost in real-time based on a variety of user selections. This ensures fair and transparent pricing for the customer.
             </p>
-            <div className="mt-12 grid gap-8 md:grid-cols-2">
+            <div className="mt-12 grid gap-8 md:grid-cols-1">
                 <Card className="bg-secondary">
                     <CardHeader>
                         <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
@@ -190,17 +177,6 @@ export default function TukTukCaseStudyPage() {
                             </li>
                             ))}
                         </ul>
-                    </CardContent>
-                </Card>
-                <Card>
-                    <CardHeader>
-                        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                            <Code className="h-6 w-6" />
-                        </div>
-                        <CardTitle className="font-headline text-2xl">Core Calculation Logic</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                         <pre className="bg-gray-800 text-white p-4 rounded-lg text-sm overflow-x-auto"><code>{codeSnippet}</code></pre>
                     </CardContent>
                 </Card>
             </div>
@@ -330,5 +306,3 @@ export default function TukTukCaseStudyPage() {
     </div>
   );
 }
-
-    
