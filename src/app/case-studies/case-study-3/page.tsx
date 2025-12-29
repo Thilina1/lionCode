@@ -81,15 +81,15 @@ const techStack = [
 ];
 
 const pricingComponents = [
-    { title: "Base Rental Cost", description: "Calculated by multiplying rental days, number of tuk-tuks, and a base per-day charge. This allows for flexible group bookings." },
-    { title: "Location-Based Pricing", description: "The cost dynamically changes based on pickup and drop-off locations, allowing the business to charge more for remote or distant deliveries." },
-    { title: "Fixed Service Fee", description: "A flat fee is added to every booking to cover administrative or operational costs." }
+    { title: "Base Rental Cost", description: "The core rental price is calculated based on the number of days and vehicles, offering flexibility for both solo travelers and larger groups." },
+    { title: "Location-Based Adjustments", description: "The cost dynamically adapts based on the traveler's chosen pickup and drop-off points, ensuring fair pricing for logistical requirements." },
+    { title: "Service & Administrative Fees", description: "Standard fees are seamlessly integrated into the total cost to cover essential operational services." }
 ];
 
 const customizableExtras = [
-    { title: "Driving Licenses", description: "The system calculates the cost for the required number of local driving licenses." },
-    { title: "Special Equipment", description: "A flexible system allows for including various other items like Baby Seats, Surf Racks, or Cooler Boxes." },
-    { title: "Special Transfers", description: "The platform can handle logistical requests, like transferring a tuk-tuk to or from a train station, with an associated cost." }
+    { title: "Permits & Licenses", description: "The system intelligently calculates costs for any necessary local driving permits or licenses based on the number of drivers." },
+    { title: "Specialized Equipment", description: "A flexible system allows the business to offer various add-ons, giving travelers the option to rent specialized gear for their trip." },
+    { title: "Logistical Support", description: "The platform can handle unique requests, like coordinating vehicle transfers to and from local transport hubs, with any associated costs clearly outlined." }
 ];
 
 export default function TukTukCaseStudyPage() {
@@ -156,9 +156,9 @@ export default function TukTukCaseStudyPage() {
 
         {/* Dynamic Pricing */}
         <div className="mx-auto mt-16 max-w-5xl">
-            <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl text-center">Dynamic Pricing Engine</h2>
+            <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl text-center">Intelligent Pricing Engine</h2>
              <p className="mt-4 text-lg text-muted-foreground text-center">
-                The platform moves beyond simple fixed pricing, utilizing a dynamic price calculation engine that builds the total rental cost in real-time based on a variety of user selections. This ensures fair and transparent pricing for the customer.
+                The platform moves beyond simple fixed pricing, utilizing a dynamic calculation engine that builds the total rental cost in real-time. This ensures fair and transparent pricing for the customer, reflecting their unique selections.
             </p>
             <div className="mt-12 grid gap-8 md:grid-cols-1">
                 <Card className="bg-secondary">
@@ -166,7 +166,7 @@ export default function TukTukCaseStudyPage() {
                         <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
                             <DollarSign className="h-6 w-6" />
                         </div>
-                        <CardTitle className="font-headline text-2xl">Pricing Components</CardTitle>
+                        <CardTitle className="font-headline text-2xl">Key Pricing Components</CardTitle>
                     </CardHeader>
                     <CardContent>
                          <ul className="space-y-4">
@@ -184,9 +184,9 @@ export default function TukTukCaseStudyPage() {
         
         {/* Customizable Extras */}
         <div className="mx-auto mt-16 max-w-5xl">
-            <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl text-center">Customizable Extras</h2>
+            <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl text-center">Customizable Add-Ons</h2>
              <p className="mt-4 text-lg text-muted-foreground text-center">
-                A key feature is the ability for travelers to customize their rental with optional "extras," each adding a specific cost to the final price. This empowers travelers while creating multiple revenue streams for the business.
+                A key advantage for travelers is the ability to customize their rental with optional "add-ons," each seamlessly integrated into the final price. This empowers travelers while creating multiple revenue streams for the business.
             </p>
             <div className="mt-12 grid gap-8 md:grid-cols-3">
                 {customizableExtras.map(item => (
@@ -204,17 +204,17 @@ export default function TukTukCaseStudyPage() {
         
         {/* Booking Process */}
         <div className="mx-auto mt-16 max-w-5xl">
-            <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl text-center">Booking & Confirmation Process</h2>
+            <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl text-center">The Seamless Booking Experience</h2>
              <p className="mt-4 text-lg text-muted-foreground text-center">
-                The process from selection to confirmation is designed to be smooth and secure.
+                The process from vehicle selection to final confirmation is designed to be a smooth, secure, and transparent journey for the customer, highlighting the advantages of a modern web application.
             </p>
             <Card className="mt-8">
                 <CardContent className="p-8">
                     <ol className="space-y-4 list-decimal list-inside text-muted-foreground">
-                        <li><span className="font-semibold text-foreground">Configuration:</span> The user selects their dates, locations, number of vehicles, and desired extras on the website.</li>
-                        <li><span className="font-semibold text-foreground">Real-Time Quote:</span> The dynamic pricing engine calculates the total rental price in real-time and displays it to the user.</li>
-                        <li><span className="font-semibold text-foreground">Payment:</span> The user proceeds to a secure payment gateway to pay the calculated total.</li>
-                        <li><span className="font-semibold text-foreground">Confirmation:</span> Upon successful payment, the booking is confirmed, and the system automatically sends a detailed confirmation email to the customer, including all essential details for peace of mind.</li>
+                        <li><span className="font-semibold text-foreground">Effortless Configuration:</span> The customer easily selects their travel dates, locations, vehicle quantity, and any desired add-ons through an intuitive user interface.</li>
+                        <li><span className="font-semibold text-foreground">Transparent, Real-Time Quotes:</span> As selections are made, the dynamic pricing engine instantly calculates and displays the total rental price, providing complete transparency and eliminating surprises.</li>
+                        <li><span className="font-semibold text-foreground">Secure & Simple Payment:</span> The user proceeds to a secure, integrated payment gateway to complete the transaction with confidence.</li>
+                        <li><span className="font-semibold text-foreground">Instant Peace of Mind:</span> Upon successful payment, the system automatically sends a detailed confirmation email, providing the customer with all essential booking details for their records.</li>
                     </ol>
                 </CardContent>
             </Card>
@@ -306,3 +306,5 @@ export default function TukTukCaseStudyPage() {
     </div>
   );
 }
+
+    
