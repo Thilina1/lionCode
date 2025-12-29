@@ -1,77 +1,72 @@
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle, BarChart2, DollarSign, Repeat, ArrowRight } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { CheckCircle, ArrowRight, Server, Database, Monitor, Library } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
-const useCases = [
-  {
-    title: "Customer Booking & Experience",
-    description: "Customers can easily book tuk-tuks through a streamlined online process. The app provides clear pricing, optional extras, and booking confirmation in real time.",
-    benefits: [
-      "Faster and more convenient bookings",
-      "Transparent pricing with no hidden costs",
-      "Improved customer trust and satisfaction"
-    ]
-  },
-  {
-    title: "Driver & Vehicle Management",
-    description: "The platform enables efficient onboarding and management of drivers and tuk-tuks, including document verification and availability tracking.",
-    benefits: [
-      "Faster driver onboarding",
-      "Centralized document management",
-      "Better utilization of available vehicles"
-    ]
-  },
-  {
-    title: "Booking Assignment & Operations",
-    description: "Admins can assign available tuk-tuks based on date, location, and demand, ensuring smooth daily operations.",
-    benefits: [
-      "Reduced scheduling conflicts",
-      "Optimized vehicle allocation",
-      "Fewer last-minute cancellations"
-    ]
-  },
-  {
-    title: "Pricing, Extras & Revenue Optimization",
-    description: "The system supports dynamic pricing, license fees, and paid extras such as full-time drivers or accessories.",
-    benefits: [
-      "Automated cost calculations",
-      "Additional revenue streams through add-ons",
-      "Clear cost breakdown for customers"
-    ]
-  },
-  {
-    title: "Admin Dashboard & Reporting",
-    description: "A centralized dashboard provides visibility into bookings, revenue, and operational performance.",
-    benefits: [
-      "Real-time business insights",
-      "Easy tracking of daily and monthly revenue",
-      "Data-driven decision making"
-    ]
-  }
+const publicFeatures = [
+    {
+        title: "Online Booking System",
+        description: "Travelers can select rental dates, choose from available tuk-tuks, provide their details, and process payments securely, receiving instant booking confirmations.",
+        details: "This system reads from and writes to a robust SQL database on Google Cloud, managing availability, pricing, and customer information in real-time."
+    },
+    {
+        title: "Dynamic Content & Blog Platform",
+        description: "A fully-featured CMS attracts and informs potential customers with articles about Sri Lankan travel. The blog highlights featured posts and categorizes content to inspire travelers.",
+        details: "Each post can have a unique, dynamically applied color scheme controlled from the admin panel. All content, including rich text, images, and tags, is pulled from the Google Cloud SQL database."
+    },
+    {
+        title: "Static & Informational Pages",
+        description: "Essential pages like 'About Us,' 'Terms and Conditions,' and 'Privacy Policy' build trust and provide legal clarity for users.",
+        details: ""
+    }
 ];
 
-const roiPoints = [
-  {
-    icon: <BarChart2 className="h-8 w-8 text-primary" />,
-    title: "Increased Revenue",
-    description: "More bookings through digital accessibility, upselling via extras, and reduced missed or duplicate bookings.",
-    impact: "Higher and more predictable income"
-  },
-  {
-    icon: <DollarSign className="h-8 w-8 text-primary" />,
-    title: "Reduced Operational Costs",
-    description: "Less dependency on manual processes, reduced paperwork and admin overhead, and automated reporting.",
-    impact: "Lower operational expenses"
-  },
-  {
-    icon: <Repeat className="h-8 w-8 text-primary" />,
-    title: "Improved Customer Retention",
-    description: "Reliable and consistent booking experience with transparent pricing and professional service.",
-    impact: "Repeat customers and long-term loyalty"
-  },
+const adminFeatures = [
+    {
+        title: "Dashboard Overview",
+        description: "A central hub provides at-a-glance analytics on business performance, including key metrics like 'Total Revenue' and 'Last 30 Days Revenue.'",
+        details: "Interactive charts show booking trends and revenue over time, with a list of upcoming pickups and returns for easy operational planning."
+    },
+    {
+        title: "Booking Management",
+        description: "A comprehensive view of all bookings made through the site, allowing the admin to see customer details, rental dates, and payment status for every booking.",
+        details: ""
+    },
+    {
+        title: "Advanced Blog Management (CMS)",
+        description: "Admins have full control over the website's content, with the ability to create, edit, and delete posts using a rich text editor. A simple checkbox marks posts as 'featured.'",
+        details: "A key feature is the drag-and-drop reordering of featured posts, which automatically updates their position on the public website, providing incredible flexibility for marketing."
+    }
+];
+
+const techStack = [
+    {
+        category: "Frontend",
+        icon: <Monitor className="h-6 w-6" />,
+        technologies: [
+            { name: "Next.js", description: "A powerful React framework for fast, server-rendered applications." },
+            { name: "TypeScript", description: "Adds static typing to JavaScript for improved code quality." },
+            { name: "Tailwind CSS", description: "A utility-first CSS framework for rapid UI development." },
+        ]
+    },
+    {
+        category: "Backend & Database",
+        icon: <Server className="h-6 w-6" />,
+        technologies: [
+            { name: "Google Cloud", description: "Provides the backend infrastructure for the application." },
+            { name: "SQL Database", description: "A flexible and scalable SQL database for storing all booking and blog data." },
+        ]
+    },
+    {
+        category: "Key Libraries",
+        icon: <Library className="h-6 w-6" />,
+        technologies: [
+            { name: "Chart.js", description: "For creating beautiful and interactive charts on the admin dashboard." },
+            { name: "Jodit-React", description: "A powerful rich text editor for easy blog content formatting." },
+        ]
+    }
 ];
 
 export default function TukTukCaseStudyPage() {
@@ -85,7 +80,7 @@ export default function TukTukCaseStudyPage() {
           <p className="font-semibold text-primary">Web Application Case Study</p>
           <h1 className="mt-2 font-headline text-4xl font-bold tracking-tight sm:text-5xl">Tuk Tuk Drive: Automated Booking Web App</h1>
           <p className="mt-4 text-lg text-muted-foreground">
-            A smart, digital platform designed to modernize tuk-tuk rental and booking operations, connecting customers, drivers, and administrators through a single, efficient system.
+            A comprehensive web application designed to connect adventurous travelers with local tuk-tuk owners in Sri Lanka, providing an authentic, immersive, and sustainable travel experience.
           </p>
         </div>
 
@@ -105,73 +100,95 @@ export default function TukTukCaseStudyPage() {
 
         {/* Overview */}
         <div className="mx-auto mt-16 max-w-5xl">
-            <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl text-center">Tuk Tuk Drive – Use Cases & Business ROI</h2>
+            <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl text-center">Project Overview</h2>
             <Card className="mt-8 bg-secondary border-none shadow-lg">
                 <CardContent className="p-8">
-                    <h3 className="font-headline text-2xl font-bold">Overview</h3>
-                    <p className="mt-4 text-muted-foreground">
-                    Tuk Tuk Drive is a smart, digital platform designed to modernize tuk-tuk rental and booking operations. The application connects customers, drivers, and administrators through a single, efficient system—reducing manual work, improving service quality, and increasing overall profitability.
+                    <p className="text-muted-foreground">
+                        TukTukDrive.com replaces the traditional, often cumbersome, rental process with a seamless online booking system, while also serving as a rich content hub for anyone looking to explore Sri Lanka. The project is split into two main parts: a public-facing website for travelers and a powerful admin dashboard for business management.
                     </p>
                 </CardContent>
             </Card>
         </div>
         
-        {/* Core Use Cases */}
+        {/* Public-Facing Website */}
         <div className="mx-auto mt-16 max-w-5xl">
-          <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl text-center">Core Use Cases</h2>
+          <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl text-center">Public-Facing Website</h2>
+           <p className="mt-4 text-lg text-muted-foreground text-center">
+            This is the primary interface for the end-user, designed to be engaging, informative, and easy to use.
+          </p>
           <div className="mt-12 grid gap-8 md:grid-cols-1">
-            {useCases.map(useCase => (
-              <Card key={useCase.title} className="transition-shadow duration-300 hover:shadow-xl">
+            {publicFeatures.map(feature => (
+              <Card key={feature.title} className="transition-shadow duration-300 hover:shadow-xl">
                 <CardHeader>
-                  <CardTitle className="font-headline text-xl">{useCase.title}</CardTitle>
+                  <CardTitle className="font-headline text-xl">{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">{useCase.description}</p>
-                  <ul className="mt-4 space-y-2">
-                    {useCase.benefits.map(benefit => (
-                      <li key={benefit} className="flex items-center gap-2">
-                        <CheckCircle className="h-5 w-5 text-green-500" />
-                        <span className="text-muted-foreground">{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="text-muted-foreground">{feature.description}</p>
+                   {feature.details && <p className="mt-2 text-sm text-primary/80 italic">{feature.details}</p>}
                 </CardContent>
               </Card>
             ))}
           </div>
         </div>
 
-        {/* Return on Investment (ROI) */}
+        {/* Admin Dashboard */}
         <div className="mx-auto mt-16 max-w-5xl">
-            <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl text-center">Return on Investment (ROI)</h2>
-            <div className="mt-12 grid gap-8 md:grid-cols-3">
-                {roiPoints.map(point => (
-                    <Card key={point.title} className="text-center p-6 transition-shadow duration-300 hover:shadow-xl">
-                        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 mb-4">
-                            {point.icon}
-                        </div>
-                        <h3 className="font-headline text-xl font-bold">{point.title}</h3>
-                        <p className="mt-2 text-muted-foreground">{point.description}</p>
-                        <p className="mt-4 font-bold text-primary">Impact: {point.impact}</p>
+          <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl text-center">Admin Dashboard</h2>
+            <p className="mt-4 text-lg text-muted-foreground text-center">
+                A secure, all-in-one control center for the business owner to manage every aspect of the platform.
+            </p>
+          <div className="mt-12 grid gap-8 md:grid-cols-1">
+            {adminFeatures.map(feature => (
+              <Card key={feature.title} className="transition-shadow duration-300 hover:shadow-xl">
+                <CardHeader>
+                  <CardTitle className="font-headline text-xl">{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">{feature.description}</p>
+                  {feature.details && <p className="mt-2 text-sm text-primary/80 italic">{feature.details}</p>}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Technology Stack */}
+        <div className="mx-auto mt-16 max-w-5xl">
+            <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl text-center">Technology Stack</h2>
+             <p className="mt-4 text-lg text-muted-foreground text-center">
+                The project is built on a modern, robust, and scalable technology stack.
+            </p>
+            <div className="mt-12 grid gap-8 md:grid-cols-1">
+                {techStack.map(stack => (
+                    <Card key={stack.category}>
+                        <CardHeader className="flex flex-row items-center gap-4">
+                            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                                {stack.icon}
+                            </div>
+                            <CardTitle className="font-headline text-2xl">{stack.category}</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                             <ul className="space-y-4">
+                                {stack.technologies.map(tech => (
+                                <li key={tech.name}>
+                                    <h4 className="font-semibold">{tech.name}</h4>
+                                    <p className="text-muted-foreground">{tech.description}</p>
+                                </li>
+                                ))}
+                            </ul>
+                        </CardContent>
                     </Card>
                 ))}
             </div>
-             <Card className="mt-8 bg-green-50 border-green-200 dark:bg-green-950 dark:border-green-800">
-                <CardContent className="p-6">
-                    <h3 className="font-headline text-xl font-bold text-green-800 dark:text-green-200">🚀 Scalability & Growth</h3>
-                    <p className="mt-2 text-green-700 dark:text-green-300">Easy expansion to new cities or regions and the ability to manage more vehicles without increasing staff leads to business growth without proportional cost increases.</p>
-                </CardContent>
-            </Card>
         </div>
 
         {/* Business Value Summary */}
         <div className="mx-auto mt-16 max-w-4xl text-center">
             <Card className="bg-gradient-to-r from-primary to-accent text-primary-foreground p-8">
-                <h2 className="font-headline text-3xl font-bold">Business Value Summary</h2>
+                <h2 className="font-headline text-3xl font-bold">Project Summary</h2>
                 <p className="mt-4 text-lg">
-                Tuk Tuk Drive transforms traditional tuk-tuk rental operations into a scalable, data-driven digital business. By automating bookings, optimizing resource allocation, and improving customer experience, the platform delivers measurable ROI within a short time frame.
+                    This project is a perfect example of a modern, full-stack application that solves a real-world business need while providing a high-quality user experience.
                 </p>
-                <p className="mt-4 text-xl font-bold">Tuk Tuk Drive is not just an app—it’s a growth engine for modern tuk-tuk businesses.</p>
             </Card>
         </div>
 
