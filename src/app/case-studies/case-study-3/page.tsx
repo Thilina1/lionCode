@@ -2,7 +2,7 @@
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Monitor, Server, Library } from 'lucide-react';
+import { ArrowRight, Monitor, Server, Library, DollarSign, Package, CheckCircle, Code } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
@@ -42,6 +42,16 @@ const adminFeatures = [
     }
 ];
 
+const keyBusinessFeatures = [
+    { title: "Dynamic Pricing Engine", description: "Calculates rental costs based on duration, vehicle count, locations, and optional extras." },
+    { title: "Customizable 'Extras' System", description: "Allows users to add items like licenses, special equipment, and transfers to their booking." },
+    { title: "Comprehensive Admin Dashboard", description: "A control center for managing bookings, viewing revenue analytics, and overseeing all operations." },
+    { title: "Full-Fledged Content Management System (CMS)", description: "An integrated blog with dynamic color palettes and drag-and-drop reordering for featured posts, serving as a powerful marketing tool." },
+    { title: "Automated Booking Confirmation", description: "Sends detailed confirmation emails to customers upon successful payment." },
+    { title: "Real-Time Data Management", description: "Built on a robust SQL backend, ensuring that all data on the admin dashboard and public site is always up-to-date." },
+    { title: "Modern Tech Stack", description: "Utilizes Next.js, TypeScript, and Tailwind CSS for a fast, reliable, and scalable application." }
+];
+
 const techStack = [
     {
         category: "Frontend",
@@ -69,6 +79,31 @@ const techStack = [
         ]
     }
 ];
+
+const pricingComponents = [
+    { title: "Base Rental Cost", description: "Calculated by multiplying rental days, number of tuk-tuks, and a base per-day charge. This allows for flexible group bookings." },
+    { title: "Location-Based Pricing", description: "The cost dynamically changes based on pickup and drop-off locations, allowing the business to charge more for remote or distant deliveries." },
+    { title: "Fixed Service Fee", description: "A flat fee is added to every booking to cover administrative or operational costs." }
+];
+
+const customizableExtras = [
+    { title: "Driving Licenses", description: "The system calculates the cost for the required number of local driving licenses." },
+    { title: "Special Equipment", description: "A flexible system allows for including various other items like Baby Seats, Surf Racks, or Cooler Boxes." },
+    { title: "Special Transfers", description: "The platform can handle logistical requests, like transferring a tuk-tuk to or from a train station, with an associated cost." }
+];
+
+const codeSnippet = `
+// Simplified logic from the codebase
+return (
+  rentalDays * tukCount * perDayCharge + // Base rental cost
+  licenseCount * licenseCharge +       // Extra: Licenses
+  extrasTotal +                        // Extra: Other items (e.g., baby seats)
+  trainTransferCost +                  // Extra: Special transfers
+  pickupPrice +                        // Dynamic: Location-based fees
+  returnPrice +                        // Dynamic: Location-based fees
+  50                                   // Fixed service fee
+);
+`;
 
 export default function TukTukCaseStudyPage() {
   const image = PlaceHolderImages.find(p => p.id === 'case-study-3');
@@ -132,6 +167,83 @@ export default function TukTukCaseStudyPage() {
           </div>
         </div>
 
+        {/* Dynamic Pricing */}
+        <div className="mx-auto mt-16 max-w-5xl">
+            <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl text-center">Dynamic Pricing Engine</h2>
+             <p className="mt-4 text-lg text-muted-foreground text-center">
+                The platform moves beyond simple fixed pricing, utilizing a dynamic price calculation engine that builds the total rental cost in real-time based on a variety of user selections. This ensures fair and transparent pricing for the customer.
+            </p>
+            <div className="mt-12 grid gap-8 md:grid-cols-2">
+                <Card className="bg-secondary">
+                    <CardHeader>
+                        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                            <DollarSign className="h-6 w-6" />
+                        </div>
+                        <CardTitle className="font-headline text-2xl">Pricing Components</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                         <ul className="space-y-4">
+                            {pricingComponents.map(item => (
+                            <li key={item.title}>
+                                <h4 className="font-semibold">{item.title}</h4>
+                                <p className="text-muted-foreground">{item.description}</p>
+                            </li>
+                            ))}
+                        </ul>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader>
+                        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                            <Code className="h-6 w-6" />
+                        </div>
+                        <CardTitle className="font-headline text-2xl">Core Calculation Logic</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                         <pre className="bg-gray-800 text-white p-4 rounded-lg text-sm overflow-x-auto"><code>{codeSnippet}</code></pre>
+                    </CardContent>
+                </Card>
+            </div>
+        </div>
+        
+        {/* Customizable Extras */}
+        <div className="mx-auto mt-16 max-w-5xl">
+            <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl text-center">Customizable Extras</h2>
+             <p className="mt-4 text-lg text-muted-foreground text-center">
+                A key feature is the ability for travelers to customize their rental with optional "extras," each adding a specific cost to the final price. This empowers travelers while creating multiple revenue streams for the business.
+            </p>
+            <div className="mt-12 grid gap-8 md:grid-cols-3">
+                {customizableExtras.map(item => (
+                <Card key={item.title} className="transition-shadow duration-300 hover:shadow-xl">
+                    <CardHeader>
+                    <CardTitle className="font-headline text-xl flex items-center gap-2"><Package className="h-6 w-6 text-primary"/>{item.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                    <p className="text-muted-foreground">{item.description}</p>
+                    </CardContent>
+                </Card>
+                ))}
+            </div>
+        </div>
+        
+        {/* Booking Process */}
+        <div className="mx-auto mt-16 max-w-5xl">
+            <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl text-center">Booking & Confirmation Process</h2>
+             <p className="mt-4 text-lg text-muted-foreground text-center">
+                The process from selection to confirmation is designed to be smooth and secure.
+            </p>
+            <Card className="mt-8">
+                <CardContent className="p-8">
+                    <ol className="space-y-4 list-decimal list-inside text-muted-foreground">
+                        <li><span className="font-semibold text-foreground">Configuration:</span> The user selects their dates, locations, number of vehicles, and desired extras on the website.</li>
+                        <li><span className="font-semibold text-foreground">Real-Time Quote:</span> The dynamic pricing engine calculates the total rental price in real-time and displays it to the user.</li>
+                        <li><span className="font-semibold text-foreground">Payment:</span> The user proceeds to a secure payment gateway to pay the calculated total.</li>
+                        <li><span className="font-semibold text-foreground">Confirmation:</span> Upon successful payment, the booking is confirmed, and the system automatically sends a detailed confirmation email to the customer, including all essential details for peace of mind.</li>
+                    </ol>
+                </CardContent>
+            </Card>
+        </div>
+
         {/* Admin Dashboard */}
         <div className="mx-auto mt-16 max-w-5xl">
           <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl text-center">Admin Dashboard</h2>
@@ -151,6 +263,22 @@ export default function TukTukCaseStudyPage() {
               </Card>
             ))}
           </div>
+        </div>
+
+        {/* Key Features Summary */}
+        <div className="mx-auto mt-16 max-w-5xl">
+            <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl text-center">Key Technical & Business Features</h2>
+            <div className="mt-12 grid gap-4 md:grid-cols-2">
+                {keyBusinessFeatures.map(feature => (
+                    <div key={feature.title} className="flex items-start gap-3">
+                        <CheckCircle className="h-6 w-6 text-green-500 mt-1 flex-shrink-0" />
+                        <div>
+                            <h4 className="font-semibold">{feature.title}</h4>
+                            <p className="text-muted-foreground text-sm">{feature.description}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
 
         {/* Technology Stack */}
