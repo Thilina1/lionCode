@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Code, Smartphone, Rocket, BrainCircuit, Cloud, Handshake } from 'lucide-react';
 import CtaSection from '@/components/home/cta-section';
@@ -55,7 +56,6 @@ const services = [
         'Cloud infrastructure setup (AWS, Google Cloud)',
         'CI/CD pipeline implementation',
         'Containerization with Docker and Kubernetes',
-        'Infrastructure as Code (IaC)',
     ]
   },
   {
