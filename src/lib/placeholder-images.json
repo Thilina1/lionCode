@@ -34,13 +34,13 @@
       "id": "case-study-3",
       "description": "A web application for booking and managing tuk-tuk rides, automating the entire process.",
       "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkYXRhJTIwYW5hbHl0aWNzfGVufDB8fHx8MTc2NDExNDk3MHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "A web application for booking and managing tuk-tuk rides, automating the entire process."
+      "imageHint": "dashboard analytics"
     },
     {
       "id": "case-study-4",
       "description": "A hotel management system that helps to manage bookings and other hotel operations.",
-      "imageUrl": "https://images.unsplash.com/photo-1686771416282-3888ddaf249b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8fHwxNzY0MTUwODk0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "A hotel management system that helps to manage bookings and other hotel operations."
+      "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxob3RlbCUyMHJlc29ydHxlbnwwfHx8fDE3NjQxNzkzNzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hotel resort"
     },
     {
       "id": "team-member-1",
