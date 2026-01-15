@@ -32,7 +32,6 @@ const services = [
     description: 'Streamline your operations, reduce manual effort, and increase efficiency with our intelligent automation solutions. We help you identify bottlenecks and implement technology to optimize your workflows.',
      details: [
         'Workflow automation and optimization',
-        'Robotic Process Automation (RPA)',
         'Automated data entry and processing',
         'Integration of disparate systems',
     ]
@@ -42,7 +41,6 @@ const services = [
     title: 'AI & Data Science',
     description: 'Leverage the power of your data with our Artificial Intelligence and Data Science services. From predictive analytics to machine learning models, we help you uncover insights and make smarter business decisions.',
     details: [
-        'Machine Learning model development',
         'Data analysis and visualization',
         'Predictive analytics and forecasting',
         'Natural Language Processing (NLP)',
