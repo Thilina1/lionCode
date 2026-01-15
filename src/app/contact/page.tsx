@@ -78,15 +78,6 @@ export default function ContactPage() {
                 <a href="tel:+94726211888" className="font-semibold text-primary hover:underline">+94 72 621 1888</a>
               </div>
             </div>
-            <div className="flex items-start gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                <MapPin className="h-6 w-6" />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold font-headline">Office</h3>
-                <p className="text-muted-foreground">123 Galle Road, Colombo, Sri Lanka</p>
-              </div>
-            </div>
           </div>
           <Card>
             <CardHeader>
