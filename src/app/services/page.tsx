@@ -73,7 +73,7 @@ export default function ServicesPage() {
   return (
     <>
       <div className="bg-background">
-        <div className="container mx-auto px-4 py-16 md:px-6 md:py-24">
+        <div className="container mx-auto px-4 py-8 md:px-6 md:py-12">
           {/* Header */}
           <div className="mx-auto max-w-3xl text-center">
             <p className="font-semibold text-primary">OUR SERVICES</p>
