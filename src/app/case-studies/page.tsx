@@ -23,7 +23,7 @@ const caseStudies = [
 export default function CaseStudiesPage() {
   return (
     <div className="bg-background">
-      <div className="container mx-auto px-4 py-16 md:px-6 md:py-24">
+      <div className="container mx-auto px-4 py-8 md:px-6 md:py-12">
         <div className="mx-auto max-w-3xl text-center">
           <p className="font-semibold text-primary">OUR WORK</p>
           <h1 className="mt-2 font-headline text-4xl font-bold tracking-tight sm:text-5xl">Success Stories</h1>
