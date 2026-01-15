@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Code, Smartphone, Rocket, BrainCircuit, Cloud, Consultant } from 'lucide-react';
+import { Code, Smartphone, Rocket, BrainCircuit, Cloud, Handshake } from 'lucide-react';
 import CtaSection from '@/components/home/cta-section';
 
 const services = [
@@ -59,7 +59,7 @@ const services = [
     ]
   },
   {
-    icon: <Consultant className="h-12 w-12 text-primary" />,
+    icon: <Handshake className="h-12 w-12 text-primary" />,
     title: 'IT Consulting',
     description: 'Gain a strategic advantage with our IT consulting services. We provide expert guidance to help you align your technology strategy with your business goals, ensuring your IT investments deliver maximum ROI.',
     details: [
