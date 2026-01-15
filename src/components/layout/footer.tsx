@@ -11,7 +11,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-2" prefetch={false}>
               <span className="font-headline text-xl font-bold text-primary">Lion Code Technologies</span>
             </Link>
-            <LionLogo width={48} height={48} className="dark:brightness-0 dark:invert" />
+            <LionLogo width={62} height={62} className="dark:brightness-0 dark:invert" />
             <p className="text-muted-foreground text-center">
               Automating business processes and solving business problems using IT.
             </p>
