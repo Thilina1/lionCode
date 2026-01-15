@@ -52,7 +52,7 @@ export default function Header() {
   const topBarColorClass = showTransparentHeader ? 'bg-black/30' : 'bg-secondary/80';
   const navBarColorClass = showTransparentHeader ? 'bg-transparent' : 'bg-background/80 shadow-md backdrop-blur-sm';
   const textColorClass = showTransparentHeader ? 'text-white/80 hover:text-white' : 'text-foreground/80';
-  const logoColorClass = showTransparentHeader ? 'brightness-0 invert' : 'dark:brightness-0 dark:invert';
+  const logoColorClass = showTransparentHeader ? 'dark:brightness-0 dark:invert' : 'dark:brightness-0 dark:invert';
   const modeToggleColorClass = showTransparentHeader ? 'text-white/80 hover:text-white hover:bg-white/10' : 'text-foreground/80';
   const iconButtonColorClass = showTransparentHeader ? 'hover:bg-white/10' : '';
 
@@ -79,7 +79,7 @@ export default function Header() {
       <div className={cn("transition-all duration-300", navBarColorClass, isTopBarHidden && '-translate-y-10')}>
         <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
             <Link href="/" className="flex items-center gap-2" prefetch={false}>
-              <Image src="/images/logo.png" alt="Lion Code Logo" width={96} height={96} className={cn(logoColorClass, "dark:brightness-0 dark:invert")}/>
+              <Image src="/images/logo.png" alt="Lion Code Logo" width={96} height={96} className={cn(logoColorClass)}/>
               <span className={cn("font-headline text-xl font-bold", showTransparentHeader ? "text-white" : "text-primary")}></span>
             </Link>
             <div className="flex items-center gap-4">
