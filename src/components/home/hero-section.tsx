@@ -13,7 +13,7 @@ export default function HeroSection() {
   }, []);
   
   return (
-    <section className="relative h-screen min-h-[600px] w-full flex items-center justify-start text-left md:min-h-[700px] overflow-hidden">
+    <section className="relative h-screen min-h-[600px] w-full flex items-center justify-center md:justify-start text-left md:min-h-[700px] overflow-hidden">
       <div className="absolute inset-0 z-[-1]">
         <Image
           src="/images/hero-background.png"
