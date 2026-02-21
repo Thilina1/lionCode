@@ -8,40 +8,40 @@ const services = [
     title: 'CUSTOM SOFTWARE DEVELOPMENT',
     shortName: 'SOFTWARE',
     hashtags: ['#BespokeSoftware', '#WebApps', '#EnterpriseSolutions'],
-    imageUrl: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    href: '/services/custom-software',
+    imageUrl: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format=fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    href: '/services#custom-software',
     description: 'We build bespoke web and enterprise applications tailored to unique business needs. Our solutions are scalable, performant, and designed for long-term value.'
   },
   {
     title: 'MOBILE APP DEVELOPMENT',
     shortName: 'MOBILE',
     hashtags: ['#iOS', '#Android', '#UserExperience'],
-    imageUrl: 'https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    href: '/services/mobile-apps',
+    imageUrl: 'https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?q=80&w=1974&auto=format=fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    href: '/services#mobile-apps',
     description: 'We create engaging and intuitive iOS and Android apps with a focus on great user experience.'
   },
   {
     title: 'BUSINESS PROCESS AUTOMATION',
     shortName: 'BPA',
     hashtags: ['#Automation', '#Efficiency', '#Streamline'],
-    imageUrl: 'https://images.unsplash.com/photo-1581090464777-f32202518091?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    href: '/services/automation',
+    imageUrl: 'https://images.unsplash.com/photo-1596791488417-b2e1af8e7116?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxnZWFycyUyMHdvcmtmbG93fGVufDB8fHx8MTc2NDE3NDI0Nnww&ixlib=rb-4.1.0&q=80&w=1080',
+    href: '/services#business-automation',
     description: 'We streamline operations and increase efficiency by identifying bottlenecks and implementing intelligent automation solutions.'
   },
   {
     title: 'AI & DATA SCIENCE',
     shortName: 'AI & DS',
     hashtags: ['#MachineLearning', '#PredictiveAnalytics', '#DataVisualization'],
-    imageUrl: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    href: '/services/ai-data-science',
+    imageUrl: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format=fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    href: '/services#ai-data-science',
     description: 'We help businesses leverage their data with predictive analytics, machine learning models, and data visualization.'
   },
   {
     title: 'CLOUD & DEVOPS',
     shortName: 'DEVOPS',
     hashtags: ['#AWS', '#GoogleCloud', '#CICD'],
-    imageUrl: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    href: '/services/cloud-devops',
+    imageUrl: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=2070&auto=format=fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    href: '/services#cloud-devops',
     description: 'We offer expertise in cloud migration, infrastructure management (AWS, Google Cloud), and CI/CD to enhance agility and scalability.'
   }
 ];
