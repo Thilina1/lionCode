@@ -39,7 +39,7 @@
     {
       "id": "case-study-4",
       "description": "A hotel management system that helps to manage bookings and other hotel operations.",
-      "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxob3RlbCUyMHJlc29ydHxlbnwwfHx8fDE3NjQxNzkzNzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://srilanka800.com/wp-content/uploads/2025/11/Victoria-Reservoir.jpg",
       "imageHint": "hotel resort"
     },
     {
@@ -165,19 +165,19 @@
     {
       "id": "innovation-vr",
       "description": "Person using a VR headset",
-      "imageUrl": "https://images.unsplash.com/photo-1639843603410-42574170a4a9?q=80&w=1974&auto=format&fit&crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageUrl": "https://images.unsplash.com/photo-1639843603410-42574170a4a9?q=80&w=1974&auto=format=fit&crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "VR headset"
     },
     {
       "id": "innovation-iot",
       "description": "Person using a smartphone to control smart home devices",
-      "imageUrl": "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=2070&auto=format&fit&crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageUrl": "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=2070&auto=format=fit&crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "smart home"
     },
     {
       "id": "innovation-warehouse",
       "description": "Large, modern warehouse with shelves of goods",
-      "imageUrl": "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?q=80&w=2070&auto=format&fit&crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageUrl": "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?q=80&w=2070&auto=format=fit&crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "warehouse logistics"
     },
     {
