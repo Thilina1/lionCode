@@ -1,98 +1,67 @@
-import { PlaceHolderImages } from '@/lib/placeholder-images';
-import Image from 'next/image';
-import Link from 'next/link';
+
+import { BrainCircuit, Zap, CloudCog, Code, Smartphone, Briefcase } from "lucide-react";
 
 const innovations = [
     {
-        id: 'innovation-software',
-        preTitle: '',
-        title: 'Software Engineering Solutions',
-        gridClass: 'md:col-span-1 md:row-span-2',
+        icon: <Code className="h-8 w-8 text-primary" />,
+        title: "Custom Software Development",
+        description: "We build bespoke web and enterprise applications tailored to unique business needs. Our solutions are scalable, performant, and designed for long-term value.",
     },
     {
-        id: 'innovation-ai',
-        preTitle: '',
-        title: 'Artificial Intelligence & Data Science',
-        gridClass: 'md:col-span-1',
+        icon: <Smartphone className="h-8 w-8 text-primary" />,
+        title: "Mobile App Development",
+        description: "We create engaging and intuitive iOS and Android apps with a focus on great user experience.",
     },
     {
-        id: 'innovation-embedded',
-        preTitle: '',
-        title: 'Web Development',
-        gridClass: 'md:col-span-1 md:row-span-3',
+        icon: <Zap className="h-8 w-8 text-primary" />,
+        title: "Business Process Automation",
+        description: "We streamline operations and increase efficiency by identifying bottlenecks and implementing intelligent automation solutions.",
     },
     {
-        id: 'innovation-iot',
-        preTitle: '',
-        title: 'IoT & IoB',
-        gridClass: 'md:col-span-1',
+        icon: <BrainCircuit className="h-8 w-8 text-primary" />,
+        title: "AI & Data Science",
+        description: "We help businesses leverage their data with predictive analytics, machine learning models, and data visualization.",
     },
     {
-        id: 'innovation-warehouse',
-        preTitle: '',
-        title: 'Mobile Application Development',
-        gridClass: 'md:col-span-2 md:row-span-2',
+        icon: <CloudCog className="h-8 w-8 text-primary" />,
+        title: "Cloud & DevOps",
+        description: "We offer expertise in cloud migration, infrastructure management (AWS, Google Cloud), and CI/CD to enhance agility and scalability.",
+    },
+    {
+        icon: <Briefcase className="h-8 w-8 text-primary" />,
+        title: "IT Consulting",
+        description: "We provide strategic guidance to align technology with business goals, ensuring IT investments deliver maximum ROI.",
     },
 ];
 
+
 export default function InnovationsSection() {
     return (
-        <section className="bg-background text-foreground py-16 md:py-24">
+        <section className="py-16 md:py-24 bg-background">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="mx-auto max-w-4xl text-center">
-                    <div className="mb-4 flex items-center justify-center">
-                        <div className="flex items-center gap-3 rounded-md bg-primary px-4 py-1.5 text-sm font-bold text-primary-foreground">
-                            <span>SERVICES</span>
-                            <div className="h-0.5 w-10 rounded-full bg-primary-foreground" />
-                        </div>
-                    </div>
-                    <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">End-To-End Technology And Innovations</h2>
+                <div className="mx-auto max-w-3xl text-center">
+                    <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">
+                        End-To-End Technology And Innovations
+                    </h2>
                     <p className="mt-4 text-lg text-muted-foreground">
-                        Offering a broad set of capabilities under one roof makes us a versatile partner to meet all your digital ambitions.
+                    Offering a broad set of capabilities under one roof makes us a versatile partner to meet all your digital ambitions.
                     </p>
                 </div>
 
-                <div className="mt-16 grid gap-4 md:grid-cols-3 md:grid-rows-3">
-                     {innovations.map(item => {
-                        const image = PlaceHolderImages.find(p => p.id === item.id);
-                        if (!image) return null;
-
-                        if (item.id === 'innovation-warehouse') {
-                            return (
-                                <Link href="#" key={item.id} className={`group relative overflow-hidden rounded-lg ${item.gridClass}`}>
-                                    <Image
-                                        src={image.imageUrl}
-                                        alt={image.description}
-                                        fill
-                                        className="object-cover transition-transform duration-300 group-hover:scale-105"
-                                        data-ai-hint={image.imageHint}
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                                    <div className="relative flex h-full flex-col justify-end p-6 text-white">
-                                        <p className="text-sm font-semibold uppercase tracking-wider">{item.preTitle}</p>
-                                        <h3 className="mt-2 font-headline text-3xl font-bold text-accent">{item.title}</h3>
-                                    </div>
-                                </Link>
-                            )
-                        }
-                        
-                        return (
-                             <Link href="#" key={item.id} className={`group relative overflow-hidden rounded-lg ${item.gridClass} min-h-[250px] md:min-h-0`}>
-                                <Image
-                                    src={image.imageUrl}
-                                    alt={image.description}
-                                    fill
-                                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                                    data-ai-hint={image.imageHint}
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                                <div className="relative flex h-full flex-col justify-end p-6 text-white">
-                                    <p className="text-sm">{item.preTitle}</p>
-                                    <h3 className={`mt-1 font-headline text-2xl font-bold ${item.id === 'innovation-software' || item.id === 'innovation-embedded' ? 'text-primary' : 'text-white'}`}>{item.title}</h3>
-                                </div>
-                            </Link>
-                        )
-                    })}
+                <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                    {innovations.map((item) => (
+                        <div key={item.title} className="flex items-start gap-4">
+                            <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/10">
+                                {item.icon}
+                            </div>
+                            <div>
+                                <h3 className="text-lg font-bold font-headline">{item.title}</h3>
+                                <p className="mt-1 text-muted-foreground">
+                                    {item.description}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>

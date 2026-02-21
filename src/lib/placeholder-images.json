@@ -67,9 +67,45 @@
       "imageHint": "technology abstract"
     },
     {
+      "id": "blog-playwright-mcp-hero",
+      "description": "AI and code concept",
+      "imageUrl": "https://images.unsplash.com/photo-1678483749293-ede73887162b?q=80&w=2070&auto=format=fit&crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "AI code"
+    },
+    {
+      "id": "playwright-mcp-config",
+      "description": "Playwright MCP configuration in VS Code",
+      "imageUrl": "https://images.unsplash.com/photo-1584188335984-7781d3194e03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y29kZSUyMGNvbmZpZ3VyYXRpb258ZW58MHx8fHwxNzcxNjg5ODYxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "code configuration"
+    },
+    {
+      "id": "playwright-mcp-tools",
+      "description": "Playwright MCP agent tools",
+      "imageUrl": "https://picsum.photos/seed/mcp-tools/800/300",
+      "imageHint": "agent tools"
+    },
+    {
+      "id": "playwright-mcp-chat",
+      "description": "Playwright MCP agent chat execution",
+      "imageUrl": "https://images.unsplash.com/photo-1626436312908-bad0007396c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhZ2VudCUyMGNoYXR8ZW58MHx8fHwxNzcxNjg5ODYxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "agent chat"
+    },
+    {
+      "id": "playwright-mcp-runner",
+      "description": "Playwright MCP test runner file",
+      "imageUrl": "https://images.unsplash.com/photo-1720799361374-4b41c4f3f2fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx0ZXN0JTIwcnVubmVyfGVufDB8fHx8MTc3MTY4OTg2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "test runner"
+    },
+    {
+      "id": "playwright-mcp-report",
+      "description": "Playwright MCP test report",
+      "imageUrl": "https://picsum.photos/seed/mcp-report/800/400",
+      "imageHint": "test report"
+    },
+    {
       "id": "blog-post-2",
       "description": "Image for another blog post",
-      "imageUrl": "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkaWdpdGFsJTIwdHJhbnNmb3JtYXRpb258ZW58MHx8fHwxNzY0MTAwOTg1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHwkaWdpdGFsJTIwdHJhbnNmb3JtYXRpb258ZW58MHx8fHwxNzY0MTAwOTg1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "digital transformation"
     },
     {

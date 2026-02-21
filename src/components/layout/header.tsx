@@ -51,8 +51,9 @@ export default function Header() {
 
   const topBarColorClass = showTransparentHeader ? 'bg-black/30' : 'bg-secondary/80';
   const navBarColorClass = showTransparentHeader ? 'bg-transparent' : 'bg-background/80 shadow-md backdrop-blur-sm';
-  const textColorClass = showTransparentHeader ? 'text-white/80 hover:text-white' : 'text-foreground/80';
-  const logoColorClass = showTransparentHeader ? 'dark:brightness-0 dark:invert' : 'dark:brightness-0 dark:invert';
+  const topBarIconColorClass = showTransparentHeader ? 'text-white/80 hover:text-white' : 'text-foreground/80';
+  const navLinkColorClass = showTransparentHeader ? 'text-foreground/80 dark:text-white/80' : 'text-foreground/80';
+  const logoColorClass = 'dark:brightness-0 dark:invert';
   const modeToggleColorClass = showTransparentHeader ? 'text-white/80 hover:text-white hover:bg-white/10' : 'text-foreground/80';
   const iconButtonColorClass = showTransparentHeader ? 'hover:bg-white/10' : '';
 
@@ -67,10 +68,10 @@ export default function Header() {
             <div className="flex items-center gap-4">
                 <span>🇱🇰</span>
                 <ModeToggle className={modeToggleColorClass} />
-                <Button variant="ghost" size="icon" className={cn("h-8 w-8", textColorClass, iconButtonColorClass)}>
+                <Button variant="ghost" size="icon" className={cn("h-8 w-8", topBarIconColorClass, iconButtonColorClass)}>
                   <Search className="h-4 w-4" />
                 </Button>
-                <Button variant="ghost" size="icon" className={cn("h-8 w-8", textColorClass, iconButtonColorClass)}>
+                <Button variant="ghost" size="icon" className={cn("h-8 w-8", topBarIconColorClass, iconButtonColorClass)}>
                   <Mail className="h-4 w-4" />
                 </Button>
             </div>
@@ -88,7 +89,7 @@ export default function Header() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={cn("font-headline transition-colors hover:text-primary", textColorClass)}
+                    className={cn("font-headline transition-colors hover:text-primary", navLinkColorClass)}
                     prefetch={false}
                   >
                     {link.label}

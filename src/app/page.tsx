@@ -2,31 +2,22 @@ import HeroSection from '@/components/home/hero-section';
 import ServicesOverview from '@/components/home/services-overview';
 import CtaSection from '@/components/home/cta-section';
 import CaseStudiesSection from '@/components/home/case-studies-section';
-import TeamSection from '@/components/home/team-section';
-import BlogSection from '@/components/home/blog-section';
-import { Separator } from '@/components/ui/separator';
-import ProductCollection from '@/components/home/product-collection';
-import InnovationsSection from '@/components/home/innovations-section';
 import ImageSeaSection from '@/components/home/image-sea-section';
 import TechnologiesSection from '@/components/home/technologies-section';
 import TrustedClientsSection from '@/components/home/trusted-clients-section';
+import BlogNewsSection from '@/components/home/blog-news-section';
 
 export default function Home() {
   return (
     <>
       <HeroSection />
-      <div className="bg-background">
-        <ServicesOverview />
-        <InnovationsSection />
-        <ImageSeaSection />
-        <TechnologiesSection />
-        <TrustedClientsSection />
-        <CaseStudiesSection />  
-        <CtaSection />
-        <Separator />
-        <Separator />
-        <BlogSection />
-      </div>
+      <ServicesOverview />
+      <ImageSeaSection />
+      <TechnologiesSection />
+      <CaseStudiesSection />
+      <CtaSection />
+      <BlogNewsSection />
+      <TrustedClientsSection />
     </>
   );
 }
