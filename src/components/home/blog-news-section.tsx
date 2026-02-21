@@ -2,19 +2,22 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const posts = [
   {
     title: 'From Code to Conversation: Playwright MCP',
     excerpt: 'Software testing has always been the backbone of quality software development. Testing is absolutely critical. Every bug caught before production saves companies money, protects the user experience, and preserves brand reputation...',
-    imageUrl: 'https://images.unsplash.com/photo-1678483749293-ede73887162b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    imageUrl: 'https://images.unsplash.com/photo-1678483749293-ede73887162b?q=80&w=2070&auto=format=fit&crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     href: '/blog/locators-and-capturing-xpath',
+    imageId: 'blog-playwright-mcp-hero'
   },
   {
-    title: '04 Most Used Advertising Appeals And Usage Scenarios',
-    excerpt: 'What is Advertising Appeal? An advertising appeal is defined as a strategy or technique for acquiring the attention of people to persuade and reinforce them to purchase a particular product or service. The approach may be a marketing or ...',
-    imageUrl: 'https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    href: '/blog/advertising-appeals',
+    title: 'Firebase Studio: Design, Develop, Test and Deploy Smarter',
+    excerpt: 'A few months ago, I came across Firebase Studio on the Google Developer Blog and YouTube. Google described it as an AI powered, cloud based development platform that can turn simple ideas into fully deployed applications...',
+    imageUrl: 'https://images.unsplash.com/photo-1633355444131-45b73485c343?q=80&w=2070&auto=format=fit&crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    href: '/blog/firebase-studio',
+    imageId: 'firebase-studio-hero'
   },
 ];
 
@@ -52,12 +55,14 @@ const BlogNewsSection = () => {
 
           {/* Right Column (Blog Posts) */}
           <div className="lg:col-span-2 grid sm:grid-cols-2 gap-8">
-            {posts.map((post, index) => (
+            {posts.map((post, index) => {
+              const image = PlaceHolderImages.find(p => p.id === post.imageId);
+              return (
               <Link key={index} href={post.href} className="group block rounded-lg overflow-hidden border border-border bg-card shadow-sm hover:shadow-lg transition-shadow duration-300">
                 <div className="h-full flex flex-col">
                   <div className="relative h-48 w-full overflow-hidden">
                     <Image
-                      src={post.imageUrl}
+                      src={image?.imageUrl || post.imageUrl}
                       alt={post.title}
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -73,7 +78,7 @@ const BlogNewsSection = () => {
                   </div>
                 </div>
               </Link>
-            ))}
+            )})}
           </div>
         </div>
       </div>
