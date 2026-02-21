@@ -69,7 +69,7 @@
     {
       "id": "blog-playwright-mcp-hero",
       "description": "AI and code concept",
-      "imageUrl": "https://images.unsplash.com/photo-1678483749293-ede73887162b?q=80&w=2070&auto=format=fit&crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*bNH-rIyCZhwgEI9XNFtmfg.png",
       "imageHint": "AI code"
     },
     {
@@ -165,19 +165,19 @@
     {
       "id": "innovation-vr",
       "description": "Person using a VR headset",
-      "imageUrl": "https://images.unsplash.com/photo-1639843603410-42574170a4a9?q=80&w=1974&auto=format=fit&crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageUrl": "https://images.unsplash.com/photo-1639843603410-42574170a4a9?q=80&w=1974&auto=format&fit&crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "VR headset"
     },
     {
       "id": "innovation-iot",
       "description": "Person using a smartphone to control smart home devices",
-      "imageUrl": "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=2070&auto=format=fit&crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageUrl": "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=2070&auto=format&fit&crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "smart home"
     },
     {
       "id": "innovation-warehouse",
       "description": "Large, modern warehouse with shelves of goods",
-      "imageUrl": "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?q=80&w=2070&auto=format=fit&crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageUrl": "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?q=80&w=2070&auto=format&fit&crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "warehouse logistics"
     },
     {
