@@ -1,10 +1,24 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { Toaster } from "@/components/ui/toaster";
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
-import ChatWidget from '@/components/chatbot/chat-widget';
-import { ThemeProvider } from '@/components/theme-provider';
+import { Open_Sans, Roboto } from 'next/font/google';
+import ClientProviders from '@/components/layout/client-providers';
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-open-sans',
+  weight: ['400', '600']
+});
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-roboto',
+  weight: ['700', '900']
+});
+
 
 export const metadata: Metadata = {
   title: 'Lion Code Technologies',
@@ -17,27 +31,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={`${openSans.variable} ${roboto.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased">
-        <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-        >
+        <ClientProviders>
           <div className="relative flex min-h-screen flex-col">
             <Header />
             <main className="flex-1 pt-[120px]">{children}</main>
             <Footer />
           </div>
-          <ChatWidget />
-          <Toaster />
-        </ThemeProvider>
+        </ClientProviders>
       </body>
     </html>
   );

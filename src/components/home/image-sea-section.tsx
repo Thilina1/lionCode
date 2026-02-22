@@ -6,10 +6,15 @@ export default function ImageSeaSection() {
       <div className="container mx-auto">
         <div className="relative">
           <div
-            className="h-96 rounded-xl bg-cover bg-center bg-fixed"
-            style={{ backgroundImage: "url('/images/imagesea.png')" }}
+            className="relative h-96 rounded-xl overflow-hidden"
           >
-            <div className="flex h-full flex-col justify-center p-8 text-white md:p-16">
+            <Image 
+                src="/images/imagesea.png"
+                alt="Ocean with digital overlay"
+                fill
+                className="object-cover"
+            />
+            <div className="absolute inset-0 flex h-full flex-col justify-center p-8 text-white md:p-16">
               <h2 className="text-4xl font-bold leading-tight md:text-5xl">
                 Have a <span className="text-red-600">BIG IDEA</span>
               </h2>

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import Image from 'next/image';
 
 export default function CtaSection() {
   const sectionRef = useRef(null);
@@ -16,16 +17,22 @@ export default function CtaSection() {
   const y = useTransform(scrollYProgress, [0, 1], ['-20%', '20%']);
 
   return (
-    <section ref={sectionRef} className="relative bg-cover bg-center py-24 md:py-40 overflow-hidden">
+    <section ref={sectionRef} className="relative py-24 md:py-40 overflow-hidden">
         <motion.div 
-            className="absolute inset-x-0 bg-cover bg-center"
+            className="absolute inset-x-0"
             style={{ 
-                backgroundImage: "url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop&ixlib-rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
                 y,
                 top: '-20%',
                 bottom: '-20%',
             }} 
-        />
+        >
+            <Image
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format=fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Team collaboration"
+                fill
+                className="object-cover"
+            />
+        </motion.div>
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/70 to-black/50" />
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="mx-auto max-w-4xl text-center">
