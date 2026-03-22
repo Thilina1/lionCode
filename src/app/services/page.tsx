@@ -80,17 +80,17 @@ export default function ServicesPage() {
     <>
       <div className="bg-background">
         {/* Hero Section */}
-        <section className="relative w-full overflow-hidden bg-muted/30 py-24 md:py-32 border-b border-border/40">
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none"></div>
-          <div className="container relative mx-auto px-4 md:px-6 flex flex-col items-center text-center">
-            <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-6 shadow-sm backdrop-blur-sm">
+        <section className="relative w-full overflow-hidden bg-[url('/images/services_hero_bg.png')] bg-cover bg-center py-24 md:py-32 border-b border-border/40">
+          <div className="absolute inset-0 bg-black/70 pointer-events-none"></div>
+          <div className="container relative mx-auto px-4 md:px-6 flex flex-col items-center text-center text-white">
+            <div className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-sm font-medium text-white mb-6 shadow-sm backdrop-blur-sm">
               <span className="flex h-2 w-2 rounded-full bg-primary mr-2"></span>
               OUR SERVICES
             </div>
             <h1 className="font-headline text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl mb-6">
               What We Do
             </h1>
-            <p className="max-w-[700px] text-lg text-muted-foreground sm:text-xl">
+            <p className="max-w-[700px] text-lg text-slate-300 sm:text-xl">
               We provide a comprehensive suite of IT services designed to solve complex business problems, drive innovation, and accelerate growth.
             </p>
           </div>
