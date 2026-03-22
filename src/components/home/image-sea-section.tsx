@@ -6,14 +6,9 @@ export default function ImageSeaSection() {
       <div className="container mx-auto">
         <div className="relative">
           <div
-            className="relative h-96 rounded-xl overflow-hidden"
+            className="relative h-96 rounded-xl overflow-hidden bg-[url('/images/imagesea.png')] bg-cover bg-center bg-no-repeat bg-fixed"
           >
-            <Image 
-                src="/images/imagesea.png"
-                alt="Ocean with digital overlay"
-                fill
-                className="object-cover"
-            />
+            <div className="absolute inset-0 bg-black/10"></div>
             <div className="absolute inset-0 flex h-full flex-col justify-center p-8 text-white md:p-16">
               <h2 className="text-4xl font-bold leading-tight md:text-5xl">
                 Have a <span className="text-red-600">BIG IDEA</span>
@@ -51,7 +46,7 @@ export default function ImageSeaSection() {
                 </div>
                 <div className="ml-4">
                   <p className="font-bold">Talk to an expert</p>
-                  <p>marketing@lioncode.com</p>
+                  <p>info@lioncode.tech</p>
                 </div>
               </div>
             </div>

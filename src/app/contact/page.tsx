@@ -48,14 +48,24 @@ export default function ContactPage() {
 
   return (
     <div className="bg-background">
-      <div className="container mx-auto px-4 py-16 md:px-6 md:py-24">
-        <div className="mx-auto max-w-3xl text-center">
-          <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl">Contact Us</h1>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Have a project in mind? We'd love to hear from you.
+      {/* Hero Section */}
+      <section className="relative w-full overflow-hidden bg-muted/30 py-24 md:py-32 border-b border-border/40">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none"></div>
+        <div className="container relative mx-auto px-4 md:px-6 flex flex-col items-center text-center">
+          <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-6 shadow-sm backdrop-blur-sm">
+            <span className="flex h-2 w-2 rounded-full bg-primary mr-2"></span>
+            GET IN TOUCH
+          </div>
+          <h1 className="font-headline text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl mb-6">
+            Contact Us
+          </h1>
+          <p className="max-w-[700px] text-lg text-muted-foreground sm:text-xl">
+            Have a project in mind? We&apos;d love to hear from you.
           </p>
         </div>
+      </section>
 
+      <div className="container mx-auto px-4 py-16 md:px-6 md:py-24">
         <div className="mt-16 grid gap-12 md:grid-cols-2">
           <div className="space-y-8">
             <div className="flex items-start gap-4">
