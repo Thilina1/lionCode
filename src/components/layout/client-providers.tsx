@@ -2,11 +2,7 @@
 
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from '@/components/theme-provider';
-import dynamic from 'next/dynamic';
-
-const ChatWidget = dynamic(() => import('@/components/chatbot/chat-widget'), {
-  ssr: false,
-});
+import WhatsappWidget from '@/components/whatsapp-widget';
 
 export default function ClientProviders({ children }: { children: React.ReactNode }) {
     return (
@@ -17,7 +13,7 @@ export default function ClientProviders({ children }: { children: React.ReactNod
             disableTransitionOnChange
         >
           {children}
-          <ChatWidget />
+          <WhatsappWidget />
           <Toaster />
         </ThemeProvider>
     );
