@@ -10,8 +10,8 @@ export default function WhatsappWidget() {
   
   // Contact Info
   const phoneNumber = "94726211888"; 
-  const displayPhone = "+94 81 2 375 396"; 
-  const email = "concierge@oruthotachalets.com"; 
+  const displayPhone = "+94 72 621 1888"; 
+  const email = "info@lioncode.tech"; 
   const message = "Hello, I'm interested in your services.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
@@ -44,8 +44,9 @@ export default function WhatsappWidget() {
                   <Mail className="w-6 h-6 text-[#d8a868] stroke-1" />
                 </div>
                 <div className="flex flex-col overflow-hidden">
-                  <h3 className="text-white text-[16px] font-medium tracking-wide">Direct Email</h3>
-                  <p className="text-[#8e9fbf] text-[13px] mt-0.5 truncate font-light">{email}</p>
+                  <h3 className="text-white text-[16px] font-medium tracking-wide">Email</h3>
+                  <p className="text-[#8e9fbf] text-[13px] mt-0.5 font-light">Send us an email for inquiries.</p>
+                  <p className="text-white text-[12px] mt-0.5 truncate font-medium opacity-80">{email}</p>
                 </div>
               </a>
 
@@ -55,8 +56,9 @@ export default function WhatsappWidget() {
                   <Phone className="w-6 h-6 text-[#d8a868] stroke-1" />
                 </div>
                 <div className="flex flex-col">
-                  <h3 className="text-white text-[16px] font-medium tracking-wide">Direct Protocol</h3>
-                  <p className="text-[#8e9fbf] text-[13px] mt-0.5 font-light">{displayPhone}</p>
+                  <h3 className="text-white text-[16px] font-medium tracking-wide">Phone</h3>
+                  <p className="text-[#8e9fbf] text-[13px] mt-0.5 font-light">Give us a call during business hours.</p>
+                  <p className="text-white text-[12px] mt-0.5 font-medium opacity-80">{displayPhone}</p>
                 </div>
               </a>
             </div>
