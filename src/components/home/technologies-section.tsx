@@ -24,6 +24,7 @@ import {
 } from '@icons-pack/react-simple-icons';
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const technologies = [
   { name: 'Flutter', icon: SiFlutter, color: '#02569B' },
@@ -52,31 +53,54 @@ export default function TechnologiesSection() {
   }, []);
 
   return (
-    <section className="py-16 md:py-24 bg-background">
+    <section className="py-8 md:py-12 bg-background overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">Our Technologies</h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            We leverage the latest and greatest technologies to deliver robust, scalable, and innovative solutions.
-          </p>
-        </div>
-        <div className="mt-12">
-            <div className="relative">
-                <div className="flex justify-center flex-wrap gap-4 md:gap-8">
-                    {technologies.map((tech) => {
-                      const IconComponent = tech.icon;
-                      const color = isMounted && resolvedTheme === 'dark' && tech.darkColor ? tech.darkColor : tech.color;
-                      return (
-                        <Card key={tech.name} className="p-4 bg-card border shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-2">
-                            <CardContent className="flex flex-col items-center justify-center p-2 m-0 gap-2 w-24 h-24">
-                                <IconComponent size={40} style={{ color: color }} />
-                                <span className="text-sm font-medium text-muted-foreground">{tech.name}</span>
-                            </CardContent>
-                        </Card>
-                      )
-                    })}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Left side - Globe image (desktop only) */}
+          <div className="hidden md:flex relative items-center justify-center">
+            <Image
+              src="/images/global.png"
+              alt="Global technology network"
+              width={600}
+              height={500}
+              className="w-full h-auto object-contain rounded-2xl"
+            />
+          </div>
+
+          {/* Right side - heading, description, tech cards */}
+          {/* On mobile: globe.png is the background with dark overlay */}
+          <div className="relative rounded-2xl overflow-hidden md:rounded-none md:overflow-visible">
+            {/* Mobile-only background image */}
+            <div
+              className="md:hidden absolute inset-0 rounded-2xl"
+              style={{ backgroundImage: 'url(/images/global.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}
+            />
+            {/* Dark overlay - only on mobile */}
+            <div className="absolute inset-0 bg-black/60 md:hidden rounded-2xl pointer-events-none" />
+
+            <div className="relative md:static p-6 md:p-0">
+              <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl text-white md:text-foreground">Our Technology Stacks</h2>
+              <p className="mt-4 text-lg text-white/80 md:text-muted-foreground">
+                We leverage the latest and greatest technologies to deliver robust, scalable, and innovative solutions.
+              </p>
+              <div className="mt-8">
+                <div className="flex flex-wrap gap-4">
+                  {technologies.map((tech) => {
+                    const IconComponent = tech.icon;
+                    const color = isMounted && resolvedTheme === 'dark' && tech.darkColor ? tech.darkColor : tech.color;
+                    return (
+                      <Card key={tech.name} className="p-3 bg-card border shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-2">
+                          <CardContent className="flex flex-col items-center justify-center p-1 m-0 gap-2 w-20 h-20">
+                              <IconComponent size={32} style={{ color: color }} />
+                              <span className="text-xs font-medium text-muted-foreground">{tech.name}</span>
+                          </CardContent>
+                      </Card>
+                    )
+                  })}
                 </div>
+              </div>
             </div>
+          </div>
         </div>
       </div>
     </section>
