@@ -8,8 +8,8 @@ export default function ClientProviders({ children }: { children: React.ReactNod
     return (
         <ThemeProvider
             attribute="class"
-            defaultTheme="system"
-            enableSystem
+            defaultTheme="dark"
+            enableSystem={false}
             disableTransitionOnChange
         >
           {children}

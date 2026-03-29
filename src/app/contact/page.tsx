@@ -50,7 +50,7 @@ export default function ContactPage() {
     <div className="bg-background">
       {/* Hero Section */}
       <section className="relative w-full overflow-hidden bg-[url('/images/contact_hero_bg.png')] bg-cover bg-center py-12 md:py-16 border-b border-border/40">
-        <div className="absolute inset-0 bg-black/70 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent pointer-events-none"></div>
         <div className="container relative mx-auto px-4 md:px-6 flex flex-col items-center text-center text-white">
           <div className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-sm font-medium text-white mb-6 shadow-sm backdrop-blur-sm">
             <span className="flex h-2 w-2 rounded-full bg-primary mr-2"></span>
