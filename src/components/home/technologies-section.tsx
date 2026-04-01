@@ -84,15 +84,15 @@ export default function TechnologiesSection() {
                 We leverage the latest and greatest technologies to deliver robust, scalable, and innovative solutions.
               </p>
               <div className="mt-8">
-                <div className="flex flex-wrap gap-4">
+                <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 xl:flex xl:flex-wrap gap-3 md:gap-4">
                   {technologies.map((tech) => {
                     const IconComponent = tech.icon;
                     const color = isMounted && resolvedTheme === 'dark' && tech.darkColor ? tech.darkColor : tech.color;
                     return (
-                      <Card key={tech.name} className="p-3 bg-card border shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-2">
-                          <CardContent className="flex flex-col items-center justify-center p-1 m-0 gap-2 w-20 h-20">
-                              <IconComponent size={32} style={{ color: color }} />
-                              <span className="text-xs font-medium text-muted-foreground">{tech.name}</span>
+                      <Card key={tech.name} className="bg-card border shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-2 overflow-hidden aspect-square flex items-center justify-center">
+                          <CardContent className="flex flex-col items-center justify-center p-2 m-0 gap-2">
+                              <IconComponent className="h-6 w-6 md:h-8 md:w-8" style={{ color: color }} />
+                              <span className="text-[10px] md:text-xs font-medium text-muted-foreground text-center line-clamp-1">{tech.name}</span>
                           </CardContent>
                       </Card>
                     )

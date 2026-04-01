@@ -30,7 +30,7 @@ export default function CaseStudiesSection() {
               See how we've helped Sri Lankan businesses thrive with our innovative solutions.
             </p>
           </div>
-          <Button asChild variant="outline" className="mt-4 md:mt-0">
+          <Button asChild variant="outline" className="hidden md:inline-flex mt-4 md:mt-0">
             <Link href="/case-studies">View All Case Studies <ArrowRight className="ml-2 h-4 w-4" /></Link>
           </Button>
         </div>
@@ -61,6 +61,13 @@ export default function CaseStudiesSection() {
               </Link>
             );
           })}
+        </div>
+        <div className="mt-10 flex justify-center md:hidden">
+          <Button asChild variant="outline" className="w-full h-12 text-base">
+            <Link href="/case-studies" className="flex items-center justify-center w-full">
+              View All Case Studies <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
